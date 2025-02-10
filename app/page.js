@@ -1,16 +1,9 @@
+import styles from "@/app/styles/home.module.css";
+
 export default function Home() {
   return (
-      <div style={{ 
-          display: "flex", 
-          justifyContent: "center", 
-          alignItems: "center", 
-          height: "100vh", 
-          flexDirection: "column", 
-          textAlign: "center",
-          fontFamily: "Arial, sans-serif"
-      }}>
-          <h1>einarlogi.is</h1>
-          <p>🚧 Work in Progress 🚧</p>
-      </div>
+    <main className={styles.hero}>
+        <h1 className={styles.heroTitle}>Einar Logi</h1>
+    </main>
   );
 }
