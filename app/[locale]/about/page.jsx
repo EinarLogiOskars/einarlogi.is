@@ -12,17 +12,28 @@ export default function About() {
         <main className={styles.hero}>
             <div className={styles.container}>
                 <section className={styles.topSection}>
-                    <motion.div 
+                    <motion.div
                         className={styles.einarImgSection} 
                         layoutId="einarImg"
-                        transition={{ type: "keyframes", duration: 1.0, ease: "easeInOut"}}
+                        transition={{
+                            type: "spring",
+                            stiffness: 300,
+                            damping: 90,
+                            duration: 1.5,
+                          }}
                     >
                         <img className={styles.einarImg} src="../einarlogi.webp" alt="Einar Logi" />
                     </motion.div>
-                    <motion.div 
+                    <motion.div
                         className={styles.textSection} 
                         layoutId="textSection"
-                        transition={{ type: "keyframes", duration: 1.0, ease: "easeInOut"}}>
+                        transition={{
+                            type: "spring",
+                            stiffness: 300,
+                            damping: 30,
+                            duration: 1.5,
+                        }}
+                    >
                         <p className={styles.iAm}>{t('iAm')}</p>
                         <p className={styles.name}>{t('name')}</p>
                     </motion.div>
@@ -37,6 +48,9 @@ export default function About() {
                     className={styles.botSection}
                 >
                     <p>{t('about')}</p>
+                    <p>{t('paragraph1')}</p>
+                    <p>{t('paragraph2')}</p>
+                    <p>{t('paragraph3')}</p>
                 </motion.section>
 
             </div>

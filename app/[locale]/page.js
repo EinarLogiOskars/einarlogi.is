@@ -12,17 +12,27 @@ export default function Home() {
     <main className={styles.hero}>
       <div className={styles.container}>
         <section className={styles.mainSection}>
-          <motion.div 
+          <motion.div
             className={styles.einarImgSection} 
             layoutId='einarImg'
-            transition={{ type: "keyframes", duration: 1.0, ease: "easeInOut"}}
+            transition={{
+              type: "spring",
+              stiffness: 300,
+              damping: 30,
+              duration: 1.5,
+            }}
           >
-            <img className={styles.einarImg} src='./einarlogi.webp' />
+            <img className={styles.einarImg} src='../einarlogi.webp' alt="Einar Logi" />
           </motion.div>
           <motion.div
             className={styles.textSection} 
             layoutId='textSection'
-            transition={{ type: "keyframes", duration: 1.0, ease: "easeInOut"}}
+            transition={{
+              type: "spring",
+              stiffness: 300,
+              damping: 30,
+              duration: 1.5,
+            }}
           >
             <p className={styles.iAm}>
               {t('iAm')}

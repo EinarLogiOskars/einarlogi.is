@@ -1,66 +1,66 @@
 .hero {
-    display: flex;
-    flex-direction: column;
-    height: calc(100dvh - var(--header-height));
-    background: var(--background);
-    color: var(--foreground);
-  }
+  display: flex;
+  flex-direction: column;
+  height: calc(100dvh - var(--header-height));
+  background: var(--background);
+  color: var(--foreground);
+}
   
-  .container {
-    width: 100%;
-    margin: 0 auto;
-    padding: 0;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-  }
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
   
-  .mainSection {
-    width: 100%;
-    margin: 0 auto;
-    padding: 0;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-  }
+.mainSection {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
 
-  .textSection {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    line-height: 1.3;
-    padding: 1rem;
-  }
+.textSection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.3;
+  padding: 1rem;
+}
 
-  .name,
-  .iAm {
-    font-size: 3rem;
-  }
+.name,
+.iAm {
+  font-size: 3rem;
+}
 
-  .iAm {
-    font-family: "Inter";
-    font-weight: 200;
-  }
+.iAm {
+  font-family: "Inter";
+  font-weight: 200;
+}
 
-  .name {
-    font-family:"Inria Serif";
-    font-weight: 300;
-    font-style: italic;
-  }
+.name {
+  font-family:"Inria Serif";
+  font-weight: 300;
+  font-style: italic;
+}
 
-  .einarImgSection {
-    display: flex;
-    align-items: end;
-    justify-content: end;
-    padding: 2rem;
-    margin-top: 2rem;
-  }
+.einarImgSection {
+  display: flex;
+  align-items: end;
+  justify-content: end;
+  padding: 2rem;
+  margin-top: 2rem;
+}
 
-  .einarImg {
-    height: 18rem;
-    width: 18rem;
-    border-radius: 50%;
-    border: 1px solid;
-  }
+.einarImg {
+  height: 18rem;
+  width: 18rem;
+  border-radius: 50%;
+  border: 1px solid;
+}
   

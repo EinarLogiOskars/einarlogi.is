@@ -21,12 +21,23 @@
 }
 
 .botSection {
-    display: flex;
     padding: 2rem;
+    background: var(--background);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    /* Optionally, add a max-width and center text for readability */
+    margin: 0 auto;
+    max-width: 800px;
 }
-
+  
 .botSection p {
-    font-family: "Inter";
+    font-family: "Inter", sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+  
+.botSection p:last-child {
+    margin-bottom: 0;
 }
 
 .name,
