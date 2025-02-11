@@ -39,4 +39,19 @@
     font-weight: 300;
     font-style: italic;
   }
+
+  .einarImgSection {
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    padding: 2rem;
+    margin-top: 5rem;
+  }
+
+  .einarImg {
+    height: 18rem;
+    width: 18rem;
+    border-radius: 50%;
+    border: 1px solid;
+  }
   
