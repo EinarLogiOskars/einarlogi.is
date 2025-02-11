@@ -10,7 +10,7 @@
     width: 100%;
     margin: 0 auto;
     padding: 0;
-    height: 100vh; /* Make container full viewport height */
+    height: 100dvh; /* Make container full viewport height */
     display: flex;
     flex-direction: column;
   }
