@@ -4,7 +4,8 @@
     width: 100%;
     margin-bottom: 1.5rem;
     padding: 1rem;
-    background-color: #000000;
+    background: #ffffff;
+    color: #000000;
 }
   
 .title {
@@ -12,4 +13,11 @@
     font-family: monospace;
     margin: 0;
     align-self: center;
+}
+
+@media(prefers-color-scheme: dark) {
+    .header {
+        background: #000000;
+        color: #ffffff;
+    }
 }
