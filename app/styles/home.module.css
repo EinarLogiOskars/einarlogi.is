@@ -15,21 +15,6 @@
     flex-direction: column;
   }
   
-  .header {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin-bottom: 1.5rem;
-    padding: 1rem;
-    background-color: #000000;
-  }
-  
-  .title {
-    font-weight: lighter;
-    font-family: monospace;
-    margin: 0;
-  }
-  
   .mainSection {
     flex: 1;
     display: flex;
