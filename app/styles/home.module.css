@@ -1,19 +1,52 @@
 .hero {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
+    background: var(--background);
+    color: var(--foreground);
+  }
+  
+  .container {
     width: 100%;
-}
+    margin: 0 auto;
+    padding: 0;
+    height: 100vh; /* Make container full viewport height */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background-color: #000000;
+  }
+  
+  .title {
+    font-weight: lighter;
+    font-family: monospace;
+    margin: 0;
+  }
+  
+  .mainSection {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.6;
+    padding: 1rem;
+  }
 
-.heroTitle {
-    font-size: 5rem;
-    font-weight: bold;
-    color: #333;
-}
+  .name,
+  .iAm {
+    font-size: 2rem;
+  }
 
-.about {
-    font-size: 1.5rem;
-    color: #333;
-}
+  .name {
+    font-family:"Inria Serif", serif;
+    font-weight: 50;
+    font-style: italic;
+  }
+  
