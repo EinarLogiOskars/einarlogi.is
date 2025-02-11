@@ -7,6 +7,7 @@ import AppWrapper from "./AppWrapper";
 import Header from "@/components/Header/Header";
 
 import "../styles/globals.css";
+import BaseLayout from "@/components/BaseLayout/BaseLayout";
 
 export const metadata = {
   title: "Einar Logi | Portfolio",
@@ -24,17 +25,6 @@ export default async function LocaleLayout({ children, params }) {
   const messages = await getMessages();
 
   return (
-    <html lang={locale}>
-      <body
-        className={`antialiased`}
-      >
-        <NextIntlClientProvider messages={messages}>
-          <Header />
-          <AppWrapper>
-            {children}
-          </AppWrapper>
-        </NextIntlClientProvider>
-      </body>
-    </html>
+    <BaseLayout locale={locale}>{children}</BaseLayout>
   );
 }

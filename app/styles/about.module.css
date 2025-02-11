@@ -1,0 +1,64 @@
+.hero {
+    display: flex;
+    flex-direction: column;
+    height: calc(100dvh - var(--header-height));
+    background: var(--background);
+    color: var(--foreground);
+  }
+  
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.topSection {
+    display: flex;
+    align-items: end;
+}
+
+.botSection {
+    display: flex;
+    padding: 2rem;
+}
+
+.botSection p {
+    font-family: "Inter";
+}
+
+.name,
+.iAm {
+  font-size: 2rem;
+}
+
+.iAm {
+  font-family: "Inter";
+  font-weight: 200;
+}
+
+.name {
+  font-family:"Inria Serif";
+  font-weight: 300;
+  font-style: italic;
+  margin-bottom: 2rem;
+}
+
+.einarImgSection {
+  display: flex;
+  align-items: end;
+  justify-content: end;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+.einarImg {
+  height: 8rem;
+  width: 8rem;
+  border-radius: 50%;
+  border: 1px solid;
+}
+
+  

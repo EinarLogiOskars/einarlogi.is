@@ -1,5 +1,6 @@
 'use client';
 
+import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
 
@@ -10,16 +11,26 @@ export default function Home() {
   return (
     <main className={styles.hero}>
       <div className={styles.container}>
-        <section className={styles.einarImgSection}>
-            <img className={styles.einarImg} src='./einarlogi.webp' />
-        </section>
         <section className={styles.mainSection}>
-          <p className={styles.iAm}>
-            {t('iAm')}
-          </p>
-          <p className={styles.name}>
-            {t('name')}
-          </p>
+          <motion.div 
+            className={styles.einarImgSection} 
+            layoutId='einarImg'
+            transition={{ type: "keyframes", duration: 1.0, ease: "easeInOut"}}
+          >
+            <img className={styles.einarImg} src='./einarlogi.webp' />
+          </motion.div>
+          <motion.div
+            className={styles.textSection} 
+            layoutId='textSection'
+            transition={{ type: "keyframes", duration: 1.0, ease: "easeInOut"}}
+          >
+            <p className={styles.iAm}>
+              {t('iAm')}
+            </p>
+            <p className={styles.name}>
+              {t('name')}
+            </p>
+          </motion.div>
         </section>
       </div>
     </main>

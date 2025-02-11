@@ -9,5 +9,16 @@
         "about": "About",
         "projects": "Projects",
         "contact": "Contact"
+    },
+
+    "NotFound": {
+        "text": "This page could not be found.",
+        "link": "Go back home"
+    },
+
+    "About": {
+        "iAm": "I am",
+        "name": "Einar Logi.",
+        "about": "This is the about page"
     }
 }

@@ -9,5 +9,16 @@
         "about": "Um mig",
         "projects": "Verkefni",
         "contact": "Hafa samband"
+    },
+
+    "NotFound": {
+        "text": "Þessi síða fannst ekki.",
+        "link": "Fara aftur heim"
+    },
+
+    "About": {
+        "iAm": "Ég er",
+        "name": "Einar Logi.",
+        "about": "Þetta er um mig síðan"
     }
 }
