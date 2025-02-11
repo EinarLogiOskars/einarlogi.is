@@ -1,0 +1,13 @@
+{
+    "Home": {
+        "iAm": "I am",
+        "name": "Einar Logi."
+    },
+
+    "Menu": {
+        "home": "Home",
+        "about": "About",
+        "projects": "Projects",
+        "contact": "Contact"
+    }
+}

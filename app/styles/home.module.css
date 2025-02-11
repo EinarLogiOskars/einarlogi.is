@@ -1,7 +1,7 @@
 .hero {
     display: flex;
     flex-direction: column;
-    height: calc(100dvh - (--header-height));
+    height: calc(100dvh - var(--header-height));
     background: var(--background);
     color: var(--foreground);
   }

@@ -1,0 +1,13 @@
+{
+    "Home": {
+        "iAm": "Ég er",
+        "name": "Einar Logi."
+    },
+
+    "Menu": {
+        "home": "Heim",
+        "about": "Um mig",
+        "projects": "Verkefni",
+        "contact": "Hafa samband"
+    }
+}

@@ -1,9 +1,12 @@
 'use client';
 
-import Hamburger from '@/components/Hamburger/Hamburger';
-import styles from './styles/home.module.css';
+import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/routing';
+
+import styles from '../styles/home.module.css';
 
 export default function Home() {
+  const t = useTranslations('Home');
   return (
     <main className={styles.hero}>
       <div className={styles.container}>
@@ -12,10 +15,10 @@ export default function Home() {
         </section>
         <section className={styles.mainSection}>
           <p className={styles.iAm}>
-            I am
+            {t('iAm')}
           </p>
           <p className={styles.name}>
-            Einar Logi.
+            {t('name')}
           </p>
         </section>
       </div>
