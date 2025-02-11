@@ -18,7 +18,7 @@ export default function About() {
                         transition={{
                             type: "spring",
                             stiffness: 300,
-                            damping: 90,
+                            damping: 30,
                             duration: 1.5,
                           }}
                     >
