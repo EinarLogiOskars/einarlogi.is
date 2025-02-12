@@ -33,6 +33,12 @@
   padding: 1rem;
 }
 
+.botSection {
+  display: flex;
+  justify-content: end;
+  padding: 3rem;
+}
+
 .name,
 .iAm {
   font-size: 3rem;
@@ -62,5 +68,12 @@
   width: 18rem;
   border-radius: 50%;
   border: 1px solid;
+}
+
+@media(min-width: 1024px) {
+  .einarImgSection {
+    align-items: center;
+    justify-content: center;
+  }
 }
   

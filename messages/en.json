@@ -1,7 +1,8 @@
 {
     "Home": {
         "iAm": "I am",
-        "name": "Einar Logi."
+        "name": "Einar Logi.",
+        "aboutLink": "About me >"
     },
 
     "Menu": {
@@ -21,7 +22,7 @@
         "name": "Einar Logi.",
         "about": "Hey, I'm Einar!",
         "paragraph1": "I'm a software developer, designer, and tech enthusiast based in Iceland. I love building things - whether it's web apps, cool designs, or tiny shrimp ecosystems in my aquarium (seriously, I have way too many).",
-        "paragraph2": "In my free time I'm probably out running, painting Blood Angels for Warhammer 40k, or figuring out how to make my website just a little bit cooler.",
+        "paragraph2": "In my free time I'm probably out running, painting my Blood Angels army for Warhammer 40k, or figuring out how to make my website just a little bit cooler.",
         "paragraph3": "Right now, I'm working on JITR, a staffing platform, and also launching my own web development service. If you need a great website or just want to talk tech, feel free to reach out!"
     }
 }

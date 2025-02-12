@@ -18,7 +18,7 @@ export default function Home() {
             transition={{
               type: "spring",
               stiffness: 300,
-              damping: 30,
+              damping: 40,
               duration: 1.5,
             }}
           >
@@ -41,6 +41,9 @@ export default function Home() {
               {t('name')}
             </p>
           </motion.div>
+          <div className={styles.botSection}>
+            <Link className={styles.aboutLink} href="/about">{t('aboutLink')}</Link>
+          </div>
         </section>
       </div>
     </main>

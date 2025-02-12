@@ -17,8 +17,8 @@ export default function About() {
                         layoutId="einarImg"
                         transition={{
                             type: "spring",
-                            stiffness: 300,
-                            damping: 30,
+                            stiffness: 200,
+                            damping: 40,
                             duration: 1.5,
                           }}
                     >

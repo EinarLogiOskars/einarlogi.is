@@ -1,7 +1,8 @@
 {
     "Home": {
         "iAm": "Ég er",
-        "name": "Einar Logi."
+        "name": "Einar Logi.",
+        "aboutLink": "Um mig >"
     },
 
     "Menu": {
@@ -19,6 +20,9 @@
     "About": {
         "iAm": "Ég er",
         "name": "Einar Logi.",
-        "about": "Þetta er um mig síðan"
+        "about": "Hæ, ég heiti Einar!",
+        "paragraph1": "Þetta er málsgrein 1",
+        "paragraph2": "Þetta er málsgrein 2",
+        "paragraph3": "Og þetta er málsgrein 3"
     }
 }
