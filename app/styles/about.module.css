@@ -17,8 +17,11 @@
 
 .topSection {
     display: flex;
-    align-items: end;
+    align-items: center;
+    gap: 2rem;
+    padding-left: 3rem;
     margin-bottom: 2rem;
+    margin-top: 2rem;
     max-width: 800px;
 }
 
@@ -56,15 +59,13 @@
   font-family:"Inria Serif";
   font-weight: 300;
   font-style: italic;
-  margin-bottom: 2rem;
 }
 
 .einarImgSection {
   display: flex;
   align-items: end;
   justify-content: end;
-  padding: 0 2rem 0 2rem;
-  margin-top: 1rem;
+  padding: 0 0 0 0;
 }
 
 .einarImg {

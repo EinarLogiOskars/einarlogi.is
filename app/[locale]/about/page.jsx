@@ -1,6 +1,6 @@
 'use client'
 
-import { motion } from "framer-motion";
+import { motion } from 'motion/react'
 import { useTranslations } from "next-intl";
 
 import styles from '../../styles/about.module.css';
@@ -29,8 +29,8 @@ export default function About() {
                         layoutId="textSection"
                         transition={{
                             type: "spring",
-                            stiffness: 300,
-                            damping: 30,
+                            stiffness: 200,
+                            damping: 40,
                             duration: 1.5,
                         }}
                     >
@@ -54,6 +54,14 @@ export default function About() {
                 </motion.section>
 
             </div>
+            <motion.div
+                layoutId='aboutLink'
+                initial={{translateX: 1000}}
+                animate={{translateX: 0}}
+                className={styles.botSection}
+            >
+                <Link key="link" className={styles.aboutLink} href="/about">{t('aboutLink')}</Link>
+            </motion.div>
         </main>
     )
 }

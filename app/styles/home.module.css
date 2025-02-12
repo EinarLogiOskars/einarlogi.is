@@ -12,25 +12,24 @@
   padding: 0;
   height: 100%;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
 }
   
-.mainSection {
-  width: 100%;
-  margin: 0 auto;
-  padding: 0;
+.topSection {
+  margin: 0 1rem;
+  padding: 1rem 0 1rem 0;
   height: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .textSection {
-  flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   line-height: 1.3;
-  padding: 1rem;
+  border: solid white;
 }
 
 .botSection {
@@ -42,6 +41,9 @@
 .name,
 .iAm {
   font-size: 3rem;
+  border: solid white;
+  align-self: flex-start;
+  padding: 0.2rem 1rem 0.2rem 1rem;
 }
 
 .iAm {
@@ -56,11 +58,7 @@
 }
 
 .einarImgSection {
-  display: flex;
-  align-items: end;
-  justify-content: end;
-  padding: 2rem;
-  margin-top: 2rem;
+  align-self: flex-end;
 }
 
 .einarImg {
@@ -71,9 +69,12 @@
 }
 
 @media(min-width: 1024px) {
+  .topSection {
+    max-width: 1000px;
+  }
   .einarImgSection {
-    align-items: center;
-    justify-content: center;
+    align-self: flex-end;
+    margin-right: 5rem;
   }
 }
   
