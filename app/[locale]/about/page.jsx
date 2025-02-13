@@ -3,11 +3,25 @@
 import { motion } from 'motion/react'
 import { useTranslations } from "next-intl";
 import { Link } from '@/i18n/routing';
+import { useEffect, useState } from 'react';
 
 import styles from '../../styles/about.module.css';
 
 export default function About() {
     const t = useTranslations('About');
+
+    const [firstVisit, setFirstVisit] = useState(false);
+
+    useEffect(() => {
+        const hasVisited = sessionStorage.getItem('hasVisited');
+
+        if(!hasVisited) {
+            setFirstVisit(true);
+            sessionStorage.setItem('hasVisited', 'true');
+        }
+    }, []);
+
+
 
     return (
         <main className={styles.hero}>
@@ -20,16 +34,23 @@ export default function About() {
                     >
                         <img className={styles.einarImg} src="../einarlogi.webp" alt="Einar Logi" />
                     </motion.div>
-                    <motion.div
-                        className={styles.textSection} 
-                        layoutId="textSection"
-                        transition={{ duration: 1.5, ease: "easeInOut"}}
-                    >
-                        <p className={styles.iAm}>{t('iAm')}</p>
-                        <p className={styles.name}>{t('name')}</p>
-                    </motion.div>
+                    <div className={styles.textSection}>
+                        <motion.div
+                            className={styles.nameSection} 
+                            layoutId="nameSection"
+                            transition={{ duration: 1.5, ease: "easeInOut"}}
+                        >
+                            <p className={styles.name}>{t('name')}</p>
+                        </motion.div>
+                        <motion.div
+                            className={styles.titleSection} 
+                            layoutId="titleSection"
+                            transition={{ duration: 1.5, ease: "easeInOut"}}
+                        >
+                            <p className={styles.title}>{t('title')}</p>
+                        </motion.div>
+                    </div>
                 </section>
-
                 <section className={styles.botSection}>
                     <motion.section
                         key="botSection"
@@ -53,33 +74,6 @@ export default function About() {
                     >
                         <Link className={styles.aboutLink} href="/">{t('aboutLink')}</Link>
                     </motion.div>
-                    <div className={styles.homeProjectsLinks}>
-                        <motion.div
-                            layoutId='homeLink'
-                            className={styles.homeLinkSection}
-                            initial={{translateX: -1000}}
-                            animate={{translateX: 0}}
-                            transition={{ duration: 2.0, ease: "easeInOut"}}
-                        >
-                            <Link className={styles.homeLink} href="/">{t('homeLink')}</Link>
-                        </motion.div>
-                        <motion.span
-                            className={styles.linkDivider}
-                            initial={{translateX: 1000}}
-                            animate={{translateX: 0}}
-                            transition={{ duration: 2.0, ease: "easeInOut"}}
-                        >|</motion.span>
-                        <motion.div
-                            layoutId='projectsLink'
-                            className={styles.projectsLinkSection}
-                            initial={{translateX: 1000}}
-                            animate={{translateX: 0}}
-                            transition={{ duration: 1.0, ease: "easeInOut"}}
-                        >
-                            <Link className={styles.projectsLink} href="/projects">{t('projectsLink')}</Link>
-                        </motion.div>
-
-                    </div>
                 </section>
             </div>
         </main>

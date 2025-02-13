@@ -3,15 +3,31 @@
 import { motion } from 'motion/react'
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
+import { useEffect, useState } from 'react';
 
 import styles from '../styles/home.module.css';
 
 export default function Home() {
   const t = useTranslations('Home');
+
+  const [firstVisit, setFirstVisit] = useState(false);
+  
+  useEffect(() => {
+
+      const hasVisited = sessionStorage.getItem('hasVisited');
+
+      if (!hasVisited) {
+        setFirstVisit(true);
+        sessionStorage.setItem('hasVisited', 'true');  
+      }
+
+  }, []);
+
   return (
     <main className={styles.hero}>
       <div className={styles.container}>
         <section className={styles.topSection}>
+          
           <motion.div
             className={styles.einarImgSection} 
             layoutId='einarImg'
@@ -19,18 +35,26 @@ export default function Home() {
           >
             <img className={styles.einarImg} src='../einarlogi.webp' alt="Einar Logi" />
           </motion.div>
-          <motion.div
-            className={styles.textSection} 
-            layoutId='textSection'
-            transition={{ duration: 1.5, ease: "easeInOut"}}
-          >
-            <p className={styles.iAm}>
-              {t('iAm')}
-            </p>
-            <p className={styles.name}>
-              {t('name')}
-            </p>
-          </motion.div>
+          <div className={styles.textSection}>
+            <motion.div
+              className={styles.nameSection} 
+              layoutId='nameSection'
+              transition={{ duration: 1.5, ease: "easeInOut"}}
+            >
+              <p className={styles.name}>
+                {t('name')}
+              </p>
+            </motion.div>
+            <motion.div
+              className={styles.titleSection} 
+              layoutId='titleSection'
+              transition={{ duration: 1.5, ease: "easeInOut"}}
+            >
+              <p className={styles.title}>
+                {t('title')}
+              </p>
+            </motion.div>
+          </div>
           <motion.div
             key="box"
             layoutId='aboutLink'

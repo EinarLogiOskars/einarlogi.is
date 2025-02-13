@@ -1,6 +1,6 @@
 {
     "Home": {
-        "iAm": "Ég er",
+        "title": "Hugbúnaðarþróun",
         "name": "Einar Logi",
         "aboutLink": "Um mig >"
     },
@@ -18,7 +18,7 @@
     },
 
     "About": {
-        "iAm": "Ég er",
+        "title": "Hugbúnaðarþróun",
         "name": "Einar Logi",
         "about": "Hæ, ég heiti Einar!",
         "paragraph1": "Þetta er málsgrein 1",

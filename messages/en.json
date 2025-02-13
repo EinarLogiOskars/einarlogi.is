@@ -1,6 +1,6 @@
 {
     "Home": {
-        "iAm": "I am",
+        "title": "Software developer",
         "name": "Einar Logi",
         "aboutLink": "About me >"
     },
@@ -21,7 +21,7 @@
         "projectsLink": "My projects >",
         "homeLink": "< Home",
         "aboutLink": "About me >",
-        "iAm": "I am",
+        "title": "Software developer",
         "name": "Einar Logi",
         "about": "Hey, I'm Einar!",
         "paragraph1": "I'm a software developer, designer, and tech enthusiast based in Iceland. I love building things - whether it's web apps, cool designs, or tiny shrimp ecosystems in my aquarium (seriously, I have way too many).",
