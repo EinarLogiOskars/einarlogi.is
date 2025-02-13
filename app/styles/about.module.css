@@ -10,9 +10,9 @@
     width: 100%;
     margin: 0 auto;
     padding: 0;
-    height: 100%;
     display: flex;
     flex-direction: column;
+    flex: 1;
 }
 
 .topSection {
@@ -26,6 +26,10 @@
 }
 
 .botSection {
+
+}
+
+.aboutMeSection {
     padding: 2rem;
     background: var(--background);
     border-top: 1px solid rgba(159, 159, 159, 0.1);
@@ -34,31 +38,54 @@
     max-width: 800px;
 }
   
-.botSection p {
+.aboutMeSection p {
     font-family: "Inter", sans-serif;
-    font-size: 1.1rem;
+    font-size: 1rem;
     line-height: 1.6;
     margin-bottom: 1rem;
+    font-weight: 200;
+}
+
+.linkSection {
+  display: flex;
+  background: var(--background);
+  border-top: 1px solid rgba(159, 159, 159, 0.1);
+  margin-top: auto;
+  margin-bottom: 50px;
+  align-self: center;
+  padding-top: 1rem;
+}
+
+.aboutLinkSection {
+  position: absolute;
+  bottom: 50px;
+  right: -150px;
+}
+
+.homeProjectsLinks {
+  display: flex;
+}
+
+.linkDivider {
+  margin: 0 1rem;
 }
   
 .botSection p:last-child {
     margin-bottom: 0;
 }
 
+.textSection {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+}
+
 .name,
 .iAm {
+  align-self: flex-start;
   font-size: 2rem;
-}
-
-.iAm {
   font-family: "Inter";
   font-weight: 200;
-}
-
-.name {
-  font-family:"Inria Serif";
-  font-weight: 300;
-  font-style: italic;
 }
 
 .einarImgSection {

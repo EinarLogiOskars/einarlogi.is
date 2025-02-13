@@ -15,24 +15,14 @@ export default function Home() {
           <motion.div
             className={styles.einarImgSection} 
             layoutId='einarImg'
-            transition={{
-              type: "keyframes",
-              stiffness: 300,
-              damping: 40,
-              duration: 1.5,
-            }}
+            transition={{ duration: 1.5, ease: "easeInOut"}}
           >
             <img className={styles.einarImg} src='../einarlogi.webp' alt="Einar Logi" />
           </motion.div>
           <motion.div
             className={styles.textSection} 
             layoutId='textSection'
-            transition={{
-              type: "spring",
-              stiffness: 300,
-              damping: 40,
-              duration: 1.5,
-            }}
+            transition={{ duration: 1.5, ease: "easeInOut"}}
           >
             <p className={styles.iAm}>
               {t('iAm')}
@@ -41,14 +31,14 @@ export default function Home() {
               {t('name')}
             </p>
           </motion.div>
-            <motion.div
-              key="box"
-              initial={{translateX: -1000}}
-              animate={{translateX: 0}}
-              className={styles.botSection}
-            >
-              <Link key="link" className={styles.aboutLink} href="/about">{t('aboutLink')}</Link>
-            </motion.div>
+          <motion.div
+            key="box"
+            layoutId='aboutLink'
+            transition={{ duration: 1.0, ease: "easeInOut"}}
+            className={styles.linkSection}
+          >
+            <Link className={styles.aboutLink} href="/about">{t('aboutLink')}</Link>
+          </motion.div>
         </section>
       </div>
     </main>
