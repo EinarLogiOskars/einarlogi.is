@@ -76,8 +76,7 @@
   justify-content: center;
   grid-column: 1;
   grid-row: 1 / span 2;
-  margin-left: 2rem;
-  margin-right: -3.5rem;
+  margin-left: 1rem;
 }
 
 .einarImg {
