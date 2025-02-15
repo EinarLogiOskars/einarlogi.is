@@ -9,36 +9,42 @@
 .container {
   width: 100%;
   margin: 0 auto;
-  padding: 0;
+  padding: 0 1rem;
   height: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
   
 .topSection {
-  margin: 0 1rem;
-  padding: 1rem 0 1rem 0;
-  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: space-evenly;
   width: 100%;
+  height: 100%;
 }
 
-.textSection {
-  display: flex;
-  flex-direction: column;
+.nameSection {
   align-self: flex-start;
-  margin-bottom: 70%;
 }
 
-.name,
-.title {
-  display: inline-block;
-  font-size: 3rem;
+.phraseSection {
+  width: 12rem;
+  height: 2.5rem;
   align-self: flex-start;
+}
+
+.namePhraseSection {
+  align-self: flex-start;
+}
+
+.name {
   font-family: "Inter";
   font-weight: 200;
+  font-size: 3rem;
+  justify-self: flex-start;
 }
 
 .einarImgSection {
@@ -49,22 +55,24 @@
   height: 18rem;
   width: 18rem;
   border-radius: 50%;
-  border: 1px solid;
+  border: 5px solid var(--foreground);
 }
 
 .linkSection {
-  position: absolute;
-  bottom: 50px;
-  right: 50px;
+  margin-top: auto;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: 50px;
 }
 
 @media(min-width: 1024px) {
+  .container {
+    padding: 0;
+  }
   .topSection {
     max-width: 1000px;
   }
   .einarImgSection {
     align-self: flex-end;
-    margin-right: 5rem;
   }
 }
-  

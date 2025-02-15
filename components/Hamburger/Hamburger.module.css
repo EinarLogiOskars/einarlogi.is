@@ -14,15 +14,16 @@
 .hamburger span {
     display: block;
     width: 2rem;
-    height: 0.1rem;
-    background: var(--foreground);
+    height: 0.2rem;
+    background: var(--background);
     border-radius: 10px;
     transition: transform 0.3s ease, opacity 0.3s ease;
-    transform-origin: 1px;
+    transform-origin: 5px;
 }
 
 .hamburger.open span:nth-child(1) {
     transform: rotate(45deg);
+    width: 2.5rem;
 }
 
 .hamburger.open span:nth-child(2) {
@@ -31,4 +32,5 @@
 
 .hamburger.open span:nth-child(3) {
     transform: rotate(-45deg);
+    width: 2.5rem;
 }

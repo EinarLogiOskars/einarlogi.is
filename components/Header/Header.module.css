@@ -1,11 +1,12 @@
  .header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
     height: var(--header-height);
-    padding: 1rem;
-    background: #ffffff;
-    color: #000000;
+    background: var(--background);
+    color: var(--foreground);
+    border-bottom: solid var(--foreground);
 }
   
 .title {
@@ -15,9 +16,16 @@
     align-self: center;
 }
 
-@media(prefers-color-scheme: dark) {
-    .header {
-        background: #000000;
-        color: #ffffff;
-    }
+.logoWrapper {
+    height: 60px;
+    width: 60px;
+    margin-left: 0.5rem;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+}
+
+.hamburger {
 }

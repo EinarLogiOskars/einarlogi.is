@@ -1,27 +1,13 @@
-'use client';
+'use client'
 
 import { motion } from 'motion/react'
 import { useTranslations } from 'next-intl';
-import { Link } from '@/i18n/routing';
-import { useEffect, useState } from 'react';
 
 import styles from '../styles/home.module.css';
+import CyclingPhrases from '@/components/CyclingPhrases';
 
 export default function Home() {
   const t = useTranslations('Home');
-
-  const [firstVisit, setFirstVisit] = useState(false);
-  
-  useEffect(() => {
-
-      const hasVisited = sessionStorage.getItem('hasVisited');
-
-      if (!hasVisited) {
-        setFirstVisit(true);
-        sessionStorage.setItem('hasVisited', 'true');  
-      }
-
-  }, []);
 
   return (
     <main className={styles.hero}>
@@ -35,34 +21,25 @@ export default function Home() {
           >
             <img className={styles.einarImg} src='../einarlogi.webp' alt="Einar Logi" />
           </motion.div>
-          <div className={styles.textSection}>
+          <div className={styles.namePhraseSection}>
+            <div className={styles.nameSection}>
+              <motion.div
+                layoutId='nameSection'
+                transition={{ duration: 1.5, ease: "easeInOut"}}
+              >
+                <h1 className={styles.name}>
+                  {t('name')}
+                </h1>
+              </motion.div>
+            </div>
             <motion.div
-              className={styles.nameSection} 
-              layoutId='nameSection'
+              className={styles.phraseSection}
+              layoutId='phrases'
               transition={{ duration: 1.5, ease: "easeInOut"}}
             >
-              <p className={styles.name}>
-                {t('name')}
-              </p>
-            </motion.div>
-            <motion.div
-              className={styles.titleSection} 
-              layoutId='titleSection'
-              transition={{ duration: 1.5, ease: "easeInOut"}}
-            >
-              <p className={styles.title}>
-                {t('title')}
-              </p>
+              <CyclingPhrases />
             </motion.div>
           </div>
-          <motion.div
-            key="box"
-            layoutId='aboutLink'
-            transition={{ duration: 1.0, ease: "easeInOut"}}
-            className={styles.linkSection}
-          >
-            <Link className={styles.aboutLink} href="/about">{t('aboutLink')}</Link>
-          </motion.div>
         </section>
       </div>
     </main>

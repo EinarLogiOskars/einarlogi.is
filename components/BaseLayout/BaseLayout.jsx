@@ -8,9 +8,7 @@ export default async function BaseLayout({ children, locale}) {
 
     return (
     <html lang={locale}>
-        <body
-            className={`antialiased`}
-        >
+        <body>
             <NextIntlClientProvider messages={messages}>
                 <Header />
                 {children}

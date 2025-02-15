@@ -9,7 +9,9 @@
         "home": "Heim",
         "about": "Um mig",
         "projects": "Verkefni",
-        "contact": "Hafa samband"
+        "contact": "Hafa samband",
+        "language": "English",
+        "locale": "en"
     },
 
     "NotFound": {
@@ -21,8 +23,16 @@
         "title": "Hugbúnaðarþróun",
         "name": "Einar Logi",
         "about": "Hæ, ég heiti Einar!",
-        "paragraph1": "Þetta er málsgrein 1",
-        "paragraph2": "Þetta er málsgrein 2",
-        "paragraph3": "Og þetta er málsgrein 3"
+        "paragraph1": "Ég er forritari, hönnuður, og tækniáhugamaður staðsettur á Íslandi. Ég hef gaman af því að búa til alskonar hluti - hvort sem við erum að tala um vefsíður, flotta hönnun, eða rækta up stofn örrækja í fiskabúrinu mínu (Ég á orðið alltof margar!)",
+        "paragraph2": "Í frítímanum mínum finnurðu mig að öllum líkindum úti að hlaupa, málandi Blood Angles herinn minn fyrir Warhammer 40k, eða vinna í að gera þessa vefsíðu aðeins flottari.",
+        "paragraph3": "Í augnablikinu er ég að vinna að JITR, starfslausnarvetvang, og einnig að vinna að því að starta vefsíðugerðarþjónustu. Ef þig vantar geggjaða vefsíðu eða ef þig langar bara að tala um einhverja tækni, ekki hika við að senda mér línu!"
+    },
+
+    "Phrases": {
+        "phrase0": "Forritari",
+        "phrase1": "Tækni Áhugamaður",
+        "phrase2": "WH40k Safnari",
+        "phrase3": "Koffínfíkill",
+        "count": "4"
     }
 }
