@@ -10,18 +10,15 @@ export const routing = defineRouting({
     domains: [
         {
             domain: 'einarlogi.com',
-            defaultLocale: 'en',
-            locales: ['en']
+            defaultLocale: 'en'
         },
         {
             domain: 'www.einarlogi.com',
-            defaultLocale: 'en',
-            locales: ['en']
+            defaultLocale: 'en'
         },
         {
             domain: 'einarlogi.is',
-            defaultLocale: 'is',
-            locales: ['is']
+            defaultLocale: 'is'
         },
         {
             domain: 'www.einarlogi.is',
@@ -29,13 +26,11 @@ export const routing = defineRouting({
         },
         {
             domain: "localhost",
-            defaultLocale: "is",
-            locales: ['is']
+            defaultLocale: "is"
         },
         {
             domain: "localhost:3000",
-            defaultLocale: "is",
-            locales: ['is']
+            defaultLocale: "is"
         },
     ]
 });

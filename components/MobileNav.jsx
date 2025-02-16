@@ -2,37 +2,29 @@
 
 import { motion } from "motion/react";
 import { useState } from "react";
-import { Link } from "@/i18n/routing";
+import { Link, usePathname, useRouter } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
 
 import Hamburger from "./Hamburger/Hamburger";
+import { useParams } from "next/navigation";
 
 export default function MobileNav() {
     const [menuOpen, setMenuOpen] = useState(false);
     const t = useTranslations('Menu')
+    const router = useRouter();
+    const pathname = usePathname();
+    const params = useParams();
 
     const toggleMenu = () => {
         setMenuOpen((prev) => !prev);
     }
 
-    const sidebarVariants = {
-        open: (height = 1000) => ({
-            clipPath: `circle(${height * 2 + 200}px at 50px 40px)`,
-            transition: {
-                type: "spring",
-                stiffness: 20,
-                restDelta: 2,
-            },
-        }),
-        closed: {
-            clipPath: "circle(30px at 260px 40px)",
-            transition: {
-                delay: 0.2,
-                type: "spring",
-                stiffness: 400,
-                damping: 40,
-            },
-        },
+    const localeChange = () => {
+        const nextLocale = t('locale');
+        router.replace(
+            {pathname, params},
+            {locale: nextLocale}
+        );
     }
 
     return (
@@ -46,10 +38,30 @@ export default function MobileNav() {
             <div style={toggleContainer}>
                 <Hamburger isOpen={menuOpen} onClick={toggleMenu} />
             </div>
-            <NavItems t={t} toggleMenu={toggleMenu}/>
+            <NavItems t={t} toggleMenu={toggleMenu} localeChange={localeChange} />
             </motion.nav>
         </div>
     );
+}
+
+const sidebarVariants = {
+    open: (height = 1000) => ({
+        clipPath: `circle(${height * 2 + 200}px at 50px 40px)`,
+        transition: {
+            type: "spring",
+            stiffness: 20,
+            restDelta: 2,
+        },
+    }),
+    closed: {
+        clipPath: "circle(30px at 260px 40px)",
+        transition: {
+            delay: 0.2,
+            type: "spring",
+            stiffness: 400,
+            damping: 40,
+        },
+    },
 }
 
 const navVariants = {
@@ -80,7 +92,7 @@ const itemVariants = {
     }
 }
 
-const NavItems = ({ t, toggleMenu }) => {
+const NavItems = ({ t, toggleMenu, localeChange }) => {
     return (
         <motion.ul style={list} variants={navVariants}>
             <motion.li
@@ -112,7 +124,7 @@ const NavItems = ({ t, toggleMenu }) => {
                 variants={itemVariants}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
-            ><a style={listItemLink} href={`/${t('locale')}`} onClick={toggleMenu}>{t('language')}</a></motion.li>
+            ><a style={languageSwitchLink} hrefLang={`/${t('locale')}`} onClick={localeChange}>{t('language')}</a></motion.li>
         </motion.ul>
     )
 }
@@ -169,4 +181,14 @@ const listItemLink = {
     textDecoration: 'none',
     fontSize: '1.2rem',
     padding: '0.5rem 0',
+}
+
+const languageSwitchLink = {
+    display: 'block',
+    width: '100%',
+    color: 'var(--background)',
+    textDecoration: 'none',
+    fontSize: '1.2rem',
+    padding: '0.5rem 0',
+    cursor: 'pointer'
 }
