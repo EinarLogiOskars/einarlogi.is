@@ -6,7 +6,18 @@ export const routing = defineRouting({
     locales: ['en', 'is'],
 
     //used when no locale matches
-    defaultLocale: 'is'
+    defaultLocale: 'is',
+
+    domains: [
+        {
+            domain: 'einarlogi.com',
+            defaultLocale: 'en',
+        },
+        {
+            domain: 'einarlogi.is',
+            defaultLocale: 'is',
+        },
+    ],
 });
 
 export const {Link, redirect, usePathname, useRouter, getPathname} = createNavigation(routing);
