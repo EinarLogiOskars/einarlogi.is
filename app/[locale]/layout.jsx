@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 
 import "../styles/globals.css";
-import BaseLayout from "@/components/BaseLayout/BaseLayout";
+import BaseLayout from "@/components/BaseLayout";
 
 export const metadata = {
   title: "Einar Logi | Portfolio",

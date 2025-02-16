@@ -2,7 +2,7 @@ import { routing } from '@/i18n/routing';
 import { useTranslations } from 'next-intl';
 
 import Link from 'next/link';
-import BaseLayout from '@/components/BaseLayout/BaseLayout';
+import BaseLayout from '@/components/BaseLayout';
 import styles from './styles/not-found.module.css';
 
 export default function NotFound() {

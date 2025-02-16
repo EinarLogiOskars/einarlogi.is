@@ -5,18 +5,23 @@ export const routing = defineRouting({
     // A list of all locales that are supported
     locales: ['en', 'is'],
 
+    defaultLocale: 'is',
+
     domains: [
         {
             domain: 'einarlogi.com',
             defaultLocale: 'en',
+            locales: ['en']
         },
         {
             domain: 'www.einarlogi.com',
             defaultLocale: 'en',
+            locales: ['en']
         },
         {
             domain: 'einarlogi.is',
             defaultLocale: 'is',
+            locales: ['is']
         },
         {
             domain: 'www.einarlogi.is',
@@ -25,14 +30,14 @@ export const routing = defineRouting({
         {
             domain: "localhost",
             defaultLocale: "is",
+            locales: ['is']
         },
         {
             domain: "localhost:3000",
             defaultLocale: "is",
+            locales: ['is']
         },
-    ],
-
-    defaultLocale: 'is'
+    ]
 });
 
 export const {Link, redirect, usePathname, useRouter, getPathname} = createNavigation(routing);
