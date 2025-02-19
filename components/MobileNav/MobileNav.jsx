@@ -47,6 +47,7 @@ const navVariants = {
         clipPath: "circle(0px at calc(100% - 3rem) 3rem)",
         transition: {
             delay: 0.2,
+            duration: 2.0,
             type: "spring",
             stiffness: 400,
             damping: 40,

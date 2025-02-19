@@ -14,32 +14,17 @@ export default function Home() {
         <section className={styles.topSection}>
           
           <div className={styles.einarImgSection} >
-              <AnimatedElement
-                layoutId={'einarImg'}
-                transition={{ duration: 1.5, ease: "easeInOut" }}
-              >
-                <img className={styles.einarImg} src='../einarlogi.webp' alt='Einar Logi' />
-              </AnimatedElement>
+              <img className={styles.einarImg} src='../einarlogi.webp' alt='Einar Logi' />
           </div>
 
           <div className={styles.namePhraseSection}>
 
             <div className={styles.nameSection}>
-              <AnimatedElement
-                layoutId={'nameSection'}
-                transition={{ duration: 1.5, ease: "easeInOut" }}
-              >
-                <h1 className={styles.name}>{t('name')}</h1>
-              </AnimatedElement>
+              <h1 className={styles.name}>{t('name')}</h1>
             </div>
 
             <div className={styles.phraseSection}>
-              <AnimatedElement
-                layoutId={'phrases'}
-                transition={{ duration: 1.5, ease: "easeInOut" }}
-              >
-                <CyclingPhrases />
-              </AnimatedElement>
+              <CyclingPhrases />
             </div>
 
           </div>

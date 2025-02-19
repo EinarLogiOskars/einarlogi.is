@@ -32,7 +32,7 @@ export const TransitionLink = ({
 
         router.push(href);
 
-        await sleep(800);
+        await sleep(500);
 
         setIsTransitioning(false);
     }

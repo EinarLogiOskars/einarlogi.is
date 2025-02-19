@@ -13,47 +13,24 @@ export default function About() {
                 <section className={styles.topSection}>
 
                     <div className={styles.einarImgSection} >
-                        <AnimatedElement
-                            layoutId={'einarImg'}
-                            transition={{ duration: 1.5, ease: "easeInOut" }}
-                        >
-                            <img className={styles.einarImg} src='../einarlogi.webp' alt='Einar Logi' />
-                        </AnimatedElement>
+                        <img className={styles.einarImg} src='../einarlogi.webp' alt='Einar Logi' />
                     </div>
 
                     <div className={styles.nameSection}>
-                        <AnimatedElement
-                            layoutId={'nameSection'}
-                            transition={{ duration: 1.5, ease: "easeInOut" }}
-                        >
-                            <h1 className={styles.name}>{t('name')}</h1>
-                        </AnimatedElement>
+                        <h1 className={styles.name}>{t('name')}</h1>
                     </div>
 
                     <div className={styles.phraseSection}>
-                        <AnimatedElement
-                            layoutId={'phrases'}
-                            transition={{ duration: 1.5, ease: "easeInOut" }}
-                        >
-                            <CyclingPhrases />
-                        </AnimatedElement>
+                        <CyclingPhrases />
                     </div>
 
                 </section>
                 <section className={styles.botSection}>
                     <div className={styles.aboutMeSection}>
-                        <AnimatedElement
-                            key="botSection"
-                            initial={{ opacity: 0, translateY: 2000 }}
-                            animate={{ opacity: 1, translateY: 0 }}
-                            exit={{ opacity: 0, translateY: -2000 }}
-                            transition={{ duration: 1.5, ease: "easeInOut"}}
-                        >
-                            <p key="about">{t('about')}</p>
-                            <p key='paragraph1'>{t('paragraph1')}</p>
-                            <p key='paragraph2'>{t('paragraph2')}</p>
-                            <p key='paragraph3'>{t('paragraph3')}</p>
-                        </AnimatedElement>
+                        <p key="about">{t('about')}</p>
+                        <p key='paragraph1'>{t('paragraph1')}</p>
+                        <p key='paragraph2'>{t('paragraph2')}</p>
+                        <p key='paragraph3'>{t('paragraph3')}</p>
                     </div>
                 </section>
             </div>

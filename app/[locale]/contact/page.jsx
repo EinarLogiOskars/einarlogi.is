@@ -1,8 +1,5 @@
 import { useTranslations } from 'next-intl';
 
-import CyclingPhrases from '@/components/CyclingPhrases';
-import AnimatedElement from '@/components/AnimatedElement';
-
 import styles from '../../styles/contact.module.css';
 
 export default function Contact() {
@@ -11,36 +8,6 @@ export default function Contact() {
     return (
         <main className={styles.hero}>
             <div className={styles.container}>
-                <div className={styles.imgAndPhrases}>
-
-                    <div className={styles.einarImgSection} >
-                        <AnimatedElement
-                            layoutId={'einarImg'}
-                            transition={{ duration: 1.5, ease: "easeInOut" }}
-                        >
-                            <img className={styles.einarImg} src='../einarlogi.webp' alt='Einar Logi' />
-                        </AnimatedElement>
-                    </div>
-
-                    <div className={styles.nameSection}>
-                        <AnimatedElement
-                            layoutId={'nameSection'}
-                            transition={{ duration: 1.5, ease: "easeInOut" }}
-                        >
-                            <h1 className={styles.name}>{t('name')}</h1>
-                        </AnimatedElement>
-                    </div>
-
-                    <div className={styles.phraseSection}>
-                        <AnimatedElement
-                            layoutId={'phrases'}
-                            transition={{ duration: 1.5, ease: "easeInOut" }}
-                        >
-                            <CyclingPhrases />
-                        </AnimatedElement>
-                    </div>
-
-                </div>
 
                 <section className={styles.topSection}>
 

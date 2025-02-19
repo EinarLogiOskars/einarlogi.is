@@ -99,7 +99,7 @@ const style = {
     right: 0,
     height: '100dvh',
     width: '100dvw',
-    background: '#EF798A',
+    background: '#ef798a',
     zIndex: 9998,
 }
 
