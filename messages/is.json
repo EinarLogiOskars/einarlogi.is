@@ -1,22 +1,6 @@
 {
     "Home": {
-        "title": "Hugbúnaðarþróun",
-        "name": "Einar Logi",
-        "aboutLink": "Um mig >"
-    },
-
-    "Menu": {
-        "home": "Heim",
-        "about": "Um mig",
-        "projects": "Verkefni",
-        "contact": "Hafa samband",
-        "language": "English",
-        "locale": "en"
-    },
-
-    "NotFound": {
-        "text": "Þessi síða fannst ekki.",
-        "link": "Fara aftur heim"
+        "name": "Einar Logi"
     },
 
     "About": {
@@ -28,11 +12,35 @@
         "paragraph3": "Í augnablikinu er ég að vinna að JITR, starfslausnarvetvang, og einnig að vinna að því að starta vefsíðugerðarþjónustu. Ef þig vantar geggjaða vefsíðu eða ef þig langar bara að tala um einhverja tækni, ekki hika við að senda mér línu!"
     },
 
+    "Projects": {
+        "name": "Einar Logi"
+    },
+
+    "Contact": {
+        "name":"Einar Logi",
+        "title": "Hafðu samband",
+        "titleText": "Whether you're looking for a web developer, need help with a tech project, or just want to chat about design, gaming, or creative ideas, feel free to drop me a message!"
+    },
+
+    "NotFound": {
+        "text": "Þessi síða fannst ekki.",
+        "link": "Fara aftur heim"
+    },
+
     "Phrases": {
         "phrase0": "Forritari",
         "phrase1": "Tækni Áhugamaður",
         "phrase2": "WH40k Safnari",
         "phrase3": "Koffínfíkill",
         "count": "4"
+    },
+
+    "Menu": {
+        "home": "Heim",
+        "about": "Um mig",
+        "projects": "Verkefni",
+        "contact": "Hafa samband",
+        "language": "English",
+        "locale": "en"
     }
 }

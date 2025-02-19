@@ -4,9 +4,10 @@ import { motion } from "motion/react";
 import { useState } from "react";
 import { Link, usePathname, useRouter } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
+import { useParams } from "next/navigation";
 
 import Hamburger from "./Hamburger/Hamburger";
-import { useParams } from "next/navigation";
+import TransitionLink from './utils/TransitionLink'
 
 export default function MobileNav() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -100,25 +101,25 @@ const NavItems = ({ t, toggleMenu, localeChange }) => {
                 variants={itemVariants}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
-            ><Link style={listItemLink} href={'/'} onClick={toggleMenu} >{t('home')}</Link></motion.li>
+            ><TransitionLink toggleMenu={toggleMenu} style={listItemLink} href={'/'}>{t('home')}</TransitionLink></motion.li>
             <motion.li
                 style={listItem}
                 variants={itemVariants}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
-            ><Link style={listItemLink} href={'/about'} onClick={toggleMenu}>{t('about')}</Link></motion.li>
+            ><TransitionLink toggleMenu={toggleMenu} style={listItemLink} href={'/about'} onClick={toggleMenu}>{t('about')}</TransitionLink></motion.li>
             <motion.li
                 style={listItem}
                 variants={itemVariants}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
-            ><Link style={listItemLink} href={'/projects'} onClick={toggleMenu}>{t('projects')}</Link></motion.li>
+            ><TransitionLink toggleMenu={toggleMenu} style={listItemLink} href={'/projects'}>{t('projects')}</TransitionLink></motion.li>
             <motion.li
                 style={listItem}
                 variants={itemVariants}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
-            ><Link style={listItemLink} href={'/contact'} onClick={toggleMenu}>{t('contact')}</Link></motion.li>
+            ><TransitionLink toggleMenu={toggleMenu} style={listItemLink} href={'/contact'} onClick={toggleMenu}>{t('contact')}</TransitionLink></motion.li>
             <motion.li
                 style={listItem}
                 variants={itemVariants}
@@ -144,7 +145,7 @@ const toggleContainer = {
 };
 
 const nav = {
-    width: 300,
+    width: '100%',
 };
 
 const background = {
@@ -153,7 +154,7 @@ const background = {
     top: 0,
     right: 0,
     bottom: 0,
-    width: 300,
+    width: '100%',
     zIndex: 1000,
 };
 

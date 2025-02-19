@@ -15,14 +15,12 @@
 }
 
 .notFound h1 {
-    font-family: "Inter";
     font-weight: 300;
 }
 
 .notFound p {
     font-size: 0.75rem;
     font-weight: 200;
-    font-family: "Inter";
 }
 
 .notFound p span {

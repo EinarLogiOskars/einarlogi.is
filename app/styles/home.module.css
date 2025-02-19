@@ -30,32 +30,32 @@
   align-self: flex-start;
 }
 
+.name {
+  font-size: 3rem;
+  font-weight: 200;
+}
+
 .phraseSection {
   width: 12rem;
   height: 2.5rem;
-  align-self: flex-start;
+  justify-self: center;
 }
 
 .namePhraseSection {
   align-self: flex-start;
 }
 
-.name {
-  font-family: "Inter";
-  font-weight: 200;
-  font-size: 3rem;
-  justify-self: flex-start;
-}
-
 .einarImgSection {
   align-self: flex-end;
+  height: 18rem;
+  width: 18rem;
 }
 
 .einarImg {
-  height: 18rem;
-  width: 18rem;
+  height: 100%;
+  width: 100%;
+  border: 5px solid white;
   border-radius: 50%;
-  border: 5px solid var(--foreground);
 }
 
 .linkSection {

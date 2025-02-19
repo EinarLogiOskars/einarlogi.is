@@ -2,11 +2,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 1.25rem;
     width: 100%;
-    height: var(--header-height);
     background: var(--background);
     color: var(--foreground);
-    border-bottom: solid var(--foreground);
+}
+
+@media(max-width: 1024px) {
+    .header {
+        border-bottom: 1px solid rgba(159, 159, 159, 0.1);
+    }
 }
   
 .title {
@@ -19,7 +24,6 @@
 .logoWrapper {
     height: 60px;
     width: 60px;
-    margin-left: 0.5rem;
 }
 
 .logo {
@@ -27,5 +31,8 @@
     height: 60px;
 }
 
-.hamburger {
+.navWrapper {
+    height: 60px;
+    width: 60px;
+    margin-right: 0.5rem;
 }

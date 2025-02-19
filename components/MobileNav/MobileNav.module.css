@@ -1,0 +1,58 @@
+.navWrapper {
+    position: absolute;
+    z-index: 2100;
+    left: 0;
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 50%;
+    top: 1.25rem;
+    right: 1.25rem;
+    z-index: 2000;
+}
+
+.navOverlay {
+    position: fixed;
+    background-color: white;
+    width: 100dvw;
+    height: 100dvh;
+    z-index: 1999;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(1fr);
+}
+
+@media(min-width:1024px) {
+    .navOverlay {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+}
+
+.list {
+    list-style: none;
+    grid-row: 2;
+    grid-column: 1;
+    z-index: 2101;
+}
+
+@media(min-width: 1024px) {
+    .list {
+        grid-row: 2;
+        grid-column: 2;
+    }
+}
+
+.listItem {
+    font-size: 5rem;
+    font-weight: 500;
+    color: black;
+}
+
+.navLinkLetter {
+    display: inline-block;
+}

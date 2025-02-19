@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inria+Serif:wght@300;400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
@@ -11,23 +11,23 @@
 }
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --header-height: 80px;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #1d1d1f;
+  --foreground: #fafaf6;
+  --header-height: 100px;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-regime), sans-serif;
   text-rendering: optimizeLegibility;
+  transition-property: opacity;
+  transition-timing-function: ease-in-out;
+  transition-duration: 500ms;
+}
+
+.page_transition {
+  opacity: 0;
 }
 
 a {
