@@ -4,6 +4,7 @@ import { regime } from '../app/fonts';
 
 import Header from "./Header/Header";
 import MobileNav2 from "./MobileNav/MobileNav";
+import { Analytics } from "@vercel/analytics/next";
 
 
 export default async function BaseLayout({ children, locale}) {
@@ -15,6 +16,7 @@ export default async function BaseLayout({ children, locale}) {
             <NextIntlClientProvider messages={messages}>
                 <MobileNav2 />
                 <Header />
+                <Analytics />
                 {children}
             </NextIntlClientProvider>
         </body>
