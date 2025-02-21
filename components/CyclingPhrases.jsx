@@ -18,7 +18,7 @@ export default function CyclingPhrases() {
     }, []);
 
     return(
-        <div style={{ position: 'relative', height: '2.5rem', overflow: 'hidden' }}>
+        <div>
             <AnimatePresence mode='wait'>
                 <motion.p
                     key={keys[currentIndex]}
@@ -26,7 +26,7 @@ export default function CyclingPhrases() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -15 }}
                     transition={{ duration: 0.5, ease: 'easeInOut' }}
-                    style={{ margin: 0, position: 'absolute', width: '100%', textAlign: 'center' }}
+                    style={{ margin: 0, width: '100%', textAlign: 'center', color: 'var(--accentPurple)' }}
                 >
                     {t(`${keys[currentIndex]}`)}
                 </motion.p>

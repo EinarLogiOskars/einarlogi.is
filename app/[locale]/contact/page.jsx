@@ -24,28 +24,6 @@ export default function Contact() {
                         <div className={styles.tab}><Tabs /></div>
                     </div>
 
-                    <div className={styles.option}>
-
-                    </div>
-
-                    <div className={styles.option}>
-                        <span>
-                       
-                        </span>
-                    </div>
-
-                    <div className={styles.option}>
-                        <span>
-                       
-                        </span>
-                    </div>
-
-                    <div className={styles.option}>
-                        <span>
-                       
-                        </span>
-                    </div>
-
                 </section>
             </div>
         </main>

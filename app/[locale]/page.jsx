@@ -20,11 +20,11 @@ export default function Home() {
           <div className={styles.namePhraseSection}>
 
             <div className={styles.nameSection}>
-              <h1 className={styles.name}>{t('name')}</h1>
+              <h1 className={styles.name}>{t('name')}<span style={{color: 'var(--accentPurple)'}}>.</span></h1>
             </div>
 
             <div className={styles.phraseSection}>
-              <CyclingPhrases />
+              <p>I am a</p><CyclingPhrases />
             </div>
 
           </div>
