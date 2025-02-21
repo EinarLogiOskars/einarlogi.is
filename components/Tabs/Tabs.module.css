@@ -1,0 +1,68 @@
+.tabWrapper {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto 1fr;
+    gap: 1rem;
+}
+
+.tabButtonWrapper {
+    grid-row: 1;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 10px;
+    height: 50px;
+    background: var(--foreground);
+    overflow: hidden;
+}
+
+.tabButton {
+    height: 100%;
+    display: grid;
+    grid-template-rows: auto 3px;
+}
+
+.tabButton h3 {
+    color: black;
+    font-weight: 300;
+}
+
+.tabButton:nth-child(1) div:nth-child(1) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tabButton:nth-child(1) div:nth-child(2) {
+    background: var(--accentPurple);
+    height: 3px;
+}
+
+.tabButton:nth-child(2) div:nth-child(1) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tabButton:nth-child(2) div:nth-child(2) {
+    background: var(--accentPink);
+    height: 3px;
+}
+
+.tabContentWrapper {
+    grid-row: 2;
+    height: 300px;
+    background: var(--foreground);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tab1 {
+    color: black;
+}
+
+.tab2 {
+    color: black;
+}

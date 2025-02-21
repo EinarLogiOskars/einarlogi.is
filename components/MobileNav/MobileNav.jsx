@@ -68,7 +68,7 @@ const NavItems = ({ toggleMenu, menuOpen }) => {
                     <motion.span className={styles.navLinkLetter} variants={letterVariants}>o</motion.span>
                     <motion.span className={styles.navLinkLetter} variants={letterVariants}>m</motion.span>
                     <motion.span className={styles.navLinkLetter} variants={letterVariants}>e</motion.span>
-                    <motion.span className={styles.navLinkLetter} variants={letterVariants}>.</motion.span>
+                    <motion.span className={styles.navLinkLetter} variants={letterVariants} style={{ color: 'var(--accentPurple)'}}>.</motion.span>
                 </TransitionLink>
             </motion.li>
             <motion.li
@@ -82,7 +82,7 @@ const NavItems = ({ toggleMenu, menuOpen }) => {
                     <motion.span className={styles.navLinkLetter} variants={letterVariants}>o</motion.span>
                     <motion.span className={styles.navLinkLetter} variants={letterVariants}>u</motion.span>
                     <motion.span className={styles.navLinkLetter} variants={letterVariants}>t</motion.span>
-                    <motion.span className={styles.navLinkLetter} variants={letterVariants}>.</motion.span>
+                    <motion.span className={styles.navLinkLetter} variants={letterVariants} style={{ color: 'var(--accentGreen)'}}>.</motion.span>
                 </TransitionLink>
             </motion.li>
             <motion.li
@@ -99,7 +99,7 @@ const NavItems = ({ toggleMenu, menuOpen }) => {
                     <motion.span className={styles.navLinkLetter} variants={letterVariants}>c</motion.span>
                     <motion.span className={styles.navLinkLetter} variants={letterVariants}>t</motion.span>
                     <motion.span className={styles.navLinkLetter} variants={letterVariants}>s</motion.span>
-                    <motion.span className={styles.navLinkLetter} variants={letterVariants}>.</motion.span>
+                    <motion.span className={styles.navLinkLetter} variants={letterVariants} style={{ color: 'var(--accentPink)'}}>.</motion.span>
                 </TransitionLink>
             </motion.li>
             <motion.li
@@ -115,7 +115,7 @@ const NavItems = ({ toggleMenu, menuOpen }) => {
                     <motion.span className={styles.navLinkLetter} variants={letterVariants}>a</motion.span>
                     <motion.span className={styles.navLinkLetter} variants={letterVariants}>c</motion.span>
                     <motion.span className={styles.navLinkLetter} variants={letterVariants}>t</motion.span>
-                    <motion.span className={styles.navLinkLetter} variants={letterVariants}>.</motion.span>
+                    <motion.span className={styles.navLinkLetter} variants={letterVariants} style={{ color: 'var(--accentYellow)'}}>.</motion.span>
                 </TransitionLink>
             </motion.li>
         </motion.ul>
