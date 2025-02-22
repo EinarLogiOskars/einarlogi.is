@@ -28,13 +28,14 @@
 
 .topSection h1 {
     font-weight: 300;
+    font-size: 2rem;
     color: var(--accentPurple);
     margin-top: 1rem;
 }
 
 .topSection p {
     font-weight: 100;
-    font-size: 0.8rem;
+    font-size: 1rem;
     margin-top: 1rem;
 }
 

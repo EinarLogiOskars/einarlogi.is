@@ -22,7 +22,7 @@ export default function Tabs() {
                             activeTab === 1 ? "#3b3b3f" : "#1d1d1f",
                     }}
                 >
-                    <div><h3>Contact form</h3></div>
+                    <div><h3>My info</h3></div>
                     {activeTab === 1 && <motion.div layoutId='line' className={styles.line}/>}
                 </motion.div>
                 <motion.div
@@ -33,7 +33,7 @@ export default function Tabs() {
                             activeTab === 2 ? "#3b3b3f" : "#1d1d1f",
                     }}
                 >
-                    <div><h3>Contact info</h3></div>
+                    <div><h3>Message me</h3></div>
                     {activeTab === 2 && <motion.div layoutId='line' className={styles.line}/>}
                 </motion.div>
             </div>

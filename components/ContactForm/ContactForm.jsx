@@ -26,22 +26,20 @@ const ContactForm = () => {
 
         const result = await res.json();
         if (res.ok) {
-            console.log(result)
             setStatus('success');
-            setFormData({ name: '', email: '', message: '' });
+            setFormData({ name: '', email: '', favorite_color: '', message: '' });
         } else {
             setStatus('error');
-            console.log(result)
         }
     };
 
     return (
         <form onSubmit={handleSubmit} className={styles.contactForm}>
-            <input type='text' name='name' placeholder='Your Name' value={formData.name} onChange={handleChange} required />
-            <input type='email' name='email' placeholder='Your Email' value={formData.email} onChange={handleChange} required />
+            <input className={styles.input} type='text' name='name' placeholder='Your Name' value={formData.name} onChange={handleChange} required />
+            <input className={styles.input} type='email' name='email' placeholder='Your Email' value={formData.email} onChange={handleChange} required />
             <input type='text' name='favorite_color' placeholder='Favorite Color' value={formData.favorite_color} onChange={handleChange} style={{ display: 'none' }} tabIndex='-1' autoComplete='off' />
-            <textarea name='message' placeholder='Your Message' value={formData.message} onChange={handleChange} required />
-            <button type='submit' disabled={status === 'loading'}>Send Message</button>
+            <textarea className={styles.message} name='message' placeholder='Your Message' value={formData.message} onChange={handleChange} required />
+            <button className={styles.submitButton} type='submit' disabled={status === 'loading'}>Send Message</button>
             {status === 'success' && <p>Message sent successfully!</p>}
             {status === 'error' && <p>Something went wrong. Try again.</p>}
         </form>
