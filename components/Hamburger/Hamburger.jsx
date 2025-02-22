@@ -7,7 +7,7 @@ export default function Hamburger({ isOpen, onClick }) {
 
     return (
         <motion.div
-            className={styles.hamburgerWrapper} 
+            className={`${styles.hamburgerWrapper} ${isOpen ? styles.open : ''}`} 
         >
             <button
                 className={`${styles.hamburger} ${isOpen ? styles.open : ''}`}

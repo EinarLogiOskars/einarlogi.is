@@ -38,22 +38,13 @@ export default function Tabs() {
                 </motion.div>
             </div>
 
-            <div className={styles.tabContentWrapper}>
+            <div className={styles.mobileTabContentWrapper}>
                 <AnimatePresence mode='wait'>
                     <motion.div
                         key={`tab${activeTab}`}
-                        initial={{
-                            y: 10,
-                            opacity: 0,
-                        }}
-                        animate={{
-                            y: 0,
-                            opacity: 1,
-                        }}
-                        exit={{
-                            y: 10,
-                            opacity: 0,
-                        }}
+                        initial={{ y: 10, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        exit={{ y: 10, opacity: 0 }}
                         className={styles.tab}
                     >
                         {activeTab === 1 && <Tab1 />}
@@ -61,6 +52,12 @@ export default function Tabs() {
                     </motion.div>
                 </AnimatePresence>
             </div>
+
+            <div className={styles.desktopTabs}>
+                <Tab1 />
+                <Tab2 />
+            </div>
+            
         </div>
     );
 }

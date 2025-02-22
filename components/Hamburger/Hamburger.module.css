@@ -8,6 +8,10 @@
     justify-content: center;
 }
 
+.hamburgerWrapper.open {
+    border: 2px solid black;
+}
+
 .hamburger {
     display: flex;
     flex-direction: column;

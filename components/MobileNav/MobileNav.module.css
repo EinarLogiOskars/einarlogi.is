@@ -8,11 +8,24 @@
     position: fixed;
     top: 0;
     background-color: white;
-    border: 2px solid black;
     border-radius: 50%;
-    top: 1.25rem;
-    right: 1.25rem;
+    top: 0.5rem;
+    right: 0.5rem;
     z-index: 2000;
+}
+
+@media(min-width: 768px) {
+    .nav {
+        top: 1rem;
+        right: 1rem;
+    }
+}
+
+@media(min-width: 1024px) {
+    .nav {
+        top: 1.25rem;
+        right: 1.25rem;
+    }
 }
 
 .navOverlay {

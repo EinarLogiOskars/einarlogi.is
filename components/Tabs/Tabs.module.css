@@ -16,6 +16,12 @@
     overflow: hidden;
 }
 
+@media(min-width: 768px) {
+    .tabButtonWrapper {
+        display: none;
+    }
+}
+
 .tabButton {
     height: 100%;
     display: grid;
@@ -51,7 +57,7 @@
     height: 3px;
 }
 
-.tabContentWrapper {
+.mobileTabContentWrapper {
     grid-row: 2;
     height: 100%;
     width: 100%;
@@ -60,6 +66,28 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex: 1;
+}
+
+@media(min-width: 768px) {
+    .mobileTabContentWrapper {
+        display: none;
+    }
+}
+
+.desktopTabs {
+    display: none;
+}
+
+@media(min-width: 768px) {
+    .desktopTabs {
+        display: flex;
+        gap: 2rem;
+    }
+
+    .desktopTabs > div {
+        flex: 1;
+    }
 }
 
 .tab {
@@ -75,6 +103,13 @@
     grid-template-columns: auto;
     grid-template-rows: repeat(1fr);
     gap: 1rem;
+}
+
+@media(min-width: 768px) {
+    .tab1 {
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 .tab1 div {
@@ -107,5 +142,6 @@
 
 .tab2 {
     width: 100%;
+    max-width: 400px;
     height: 100%;
 }

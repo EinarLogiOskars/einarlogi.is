@@ -2,15 +2,22 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.25rem;
+    padding: 0.5rem;
     width: 100%;
     background: var(--background);
     color: var(--foreground);
+    border-bottom: 1px solid rgba(159, 159, 159, 0.1);
 }
 
-@media(max-width: 1024px) {
+@media(min-width: 768px) {
     .header {
-        border-bottom: 1px solid rgba(159, 159, 159, 0.1);
+        padding: 1rem;
+    }
+}
+
+@media(min-width: 1024px) {
+    .header {
+       padding: 1.25rem; 
     }
 }
   

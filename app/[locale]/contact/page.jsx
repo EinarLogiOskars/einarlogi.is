@@ -13,15 +13,17 @@ export default function Contact() {
 
                 <section className={styles.topSection}>
 
-                    <h1>{t('title')}</h1>
-                    <p>{t('titleText')}</p>
+                    <div className={styles.textContainer}>
+                        <h1>{t('title')}</h1>
+                        <p>{t('titleText')}</p>
+                    </div>
 
                 </section>
 
                 <section className={styles.options}>
 
                     <div className={styles.tabWrapper}>
-                        <div className={styles.tab}><Tabs /></div>
+                        <Tabs />
                     </div>
 
                 </section>
