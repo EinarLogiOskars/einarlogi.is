@@ -1,8 +1,9 @@
 'use client'
 
-import Link from "next/link"
+
 import TransitionOverlay from './TransitionOverlay'
-import { useRouter } from "next/navigation"
+
+import { Link, useRouter } from "@/i18n/routing";
 import { useState } from "react";
 
 function sleep(ms) {
