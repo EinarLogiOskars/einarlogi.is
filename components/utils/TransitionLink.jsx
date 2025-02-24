@@ -28,7 +28,7 @@ export const TransitionLink = ({
         
         await sleep(800);
         
-        toggleMenu();
+        if(toggleMenu) toggleMenu();
 
         router.push(href);
 

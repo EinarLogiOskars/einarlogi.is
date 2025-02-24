@@ -61,11 +61,34 @@
 }
 
 .listItem {
-    font-size: 5rem;
+    font-size: 4.9rem;
     font-weight: 500;
     color: black;
 }
 
+.listItemLangSwitch {
+    position: absolute;
+    top: 27px;
+    right: 100px;
+}
+
 .navLinkLetter {
     display: inline-block;
+}
+
+.navLangLetter {
+    display: inline-block;
+    font-size: 2rem;
+    font-weight: 300;
+    color: black;
+    cursor: pointer;
+    align-self: center;
+}
+.navLangSpacer {
+    display: inline-block;
+    font-size: 2rem;
+    margin: 0 0.5rem 0 0.5rem;
+    font-weight: 500;
+    color: black;
+    cursor: pointer;
 }

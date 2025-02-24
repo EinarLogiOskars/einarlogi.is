@@ -18,12 +18,14 @@
   --accentPink: #ef798a;
   --accentYellow: #ffc759;
   --header-height: 100px;
+  letter-spacing: 0.7px;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: var(--font-regime), sans-serif;
+  font-family: var(--font-regime), "Inter", sans-serif;
+  font-feature-settings: "ss02" 1, "cv02" 1;
   text-rendering: optimizeLegibility;
   transition-property: opacity;
   transition-timing-function: ease-in-out;

@@ -3,18 +3,31 @@
 import { motion } from 'motion/react';
 import { useTranslations } from 'next-intl';
 import { useState } from 'react';
+import { usePathname, useRouter } from '@/i18n/routing';
+import { useParams } from 'next/navigation';
 
 import Hamburger from '../Hamburger/Hamburger';
 import TransitionLink from '../utils/TransitionLink';
 
 import styles from './MobileNav.module.css';
 
-export default function MobileNav2() {
+export default function MobileNav() {
     const [menuOpen, setMenuOpen] = useState(false);
     const t = useTranslations('Menu')
+    const router = useRouter();
+    const pathname = usePathname();
+    const params = useParams();
 
     const toggleMenu = () => {
         setMenuOpen((prev) => !prev);
+    }
+
+    const localeChange = () => {
+        const nextLocale = t('locale');
+        router.replace(
+            {pathname, params},
+            {locale: nextLocale}
+        );
     }
 
     return (
@@ -28,7 +41,7 @@ export default function MobileNav2() {
                 animate={menuOpen ? 'open' : 'closed'}
                 className={styles.navOverlay}
             >
-                <NavItems menuOpen={menuOpen} toggleMenu={toggleMenu}/>
+                <NavItems toggleMenu={toggleMenu} localeChange={localeChange} />
             </motion.nav>
         </div>
     );
@@ -55,7 +68,7 @@ const navVariants = {
     },
 } 
 
-const NavItems = ({ toggleMenu, menuOpen }) => {
+const NavItems = ({ toggleMenu, localeChange }) => {
     return (
         <motion.ul className={styles.list} variants={listVariants}>
             <motion.li
@@ -118,6 +131,21 @@ const NavItems = ({ toggleMenu, menuOpen }) => {
                     <motion.span className={styles.navLinkLetter} variants={letterVariants} style={{ color: 'var(--accentYellow)'}}>.</motion.span>
                 </TransitionLink>
             </motion.li>
+            <motion.li
+                className={styles.listItemLangSwitch}
+                variants={listItemVariants}
+                whileHover={{ color: '#ffc759' }}
+            >
+                <div toggleMenu={toggleMenu} onClick={localeChange}>
+                    <motion.span className={styles.navLangLetter} variants={letterVariants}>i</motion.span>
+                    <motion.span className={styles.navLangLetter} variants={letterVariants}>s</motion.span>
+                    <motion.span className={styles.navLangLetter} variants={letterVariants}> </motion.span>
+                    <motion.span className={styles.navLangSpacer} variants={letterVariants}>|</motion.span>
+                    <motion.span className={styles.navLangLetter} variants={letterVariants}> </motion.span>
+                    <motion.span className={styles.navLangLetter} variants={letterVariants}>e</motion.span>
+                    <motion.span className={styles.navLangLetter} variants={letterVariants}>n</motion.span>
+                </div>
+            </motion.li>
         </motion.ul>
     );
 }
@@ -125,7 +153,7 @@ const NavItems = ({ toggleMenu, menuOpen }) => {
 const listVariants = {
     open: {
         transition: {
-        staggerChildren: 0.2, // each child starts 0.1s after the previous
+        staggerChildren: 0.2,
         },
     },
     closed: {},
@@ -151,22 +179,3 @@ const letterVariants = {
         opacity: 0,
     },
 };
-
-// const itemVariants = {
-//     open : {
-//         y: 0,
-//         opacity: 1,
-//         visibility: 'visible',
-//         transition: {
-//             y: { stiffness: 1000, velocity: -100},
-//         },
-//     },
-//     closed: {
-//         y: 50,
-//         opacity: 0,
-//         visibility: 'hidden',
-//         transition: {
-//             y: { stiffness: 1000 }
-//         }
-//     }
-// }

@@ -22,7 +22,12 @@
     "Contact": {
         "name":"Einar Logi",
         "title": "Contact Me",
-        "titleText": "Whether you're looking for a web developer, need help with a tech project, or just want to chat about design, gaming, or creative ideas, feel free to drop me a message!"
+        "titleText": "Whether you're looking for a web developer, need help with a tech project, or just want to chat about design, gaming, or creative ideas, feel free to drop me a message!",
+        "myInfo": "My info",
+        "message": "Message me",
+        "email": "Email",
+        "phone": "Phone",
+        "social": "Check me out on"
     },
     
     "NotFound": {

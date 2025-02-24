@@ -2,6 +2,7 @@
 
 import { AnimatePresence, motion } from 'motion/react';
 import { useState } from 'react';
+import { useTranslations } from 'next-intl';
 
 import ContactForm from '../ContactForm/ContactForm';
 
@@ -9,6 +10,7 @@ import styles from './Tabs.module.css';
 
 export default function Tabs() {
     const [activeTab, setActiveTab] = useState(1);
+    const t = useTranslations('Contact')
 
     return (
         <div className={styles.tabWrapper}>
@@ -22,7 +24,7 @@ export default function Tabs() {
                             activeTab === 1 ? "#3b3b3f" : "#1d1d1f",
                     }}
                 >
-                    <div><h3>My info</h3></div>
+                    <div><h3>{t('myInfo')}</h3></div>
                     {activeTab === 1 && <motion.div layoutId='line' className={styles.line}/>}
                 </motion.div>
                 <motion.div
@@ -33,7 +35,7 @@ export default function Tabs() {
                             activeTab === 2 ? "#3b3b3f" : "#1d1d1f",
                     }}
                 >
-                    <div><h3>Message me</h3></div>
+                    <div><h3>{t('message')}</h3></div>
                     {activeTab === 2 && <motion.div layoutId='line' className={styles.line}/>}
                 </motion.div>
             </div>
@@ -47,28 +49,28 @@ export default function Tabs() {
                         exit={{ y: 10, opacity: 0 }}
                         className={styles.tab}
                     >
-                        {activeTab === 1 && <Tab1 />}
-                        {activeTab === 2 && <Tab2 />}
+                        {activeTab === 1 && <Tab1 t={t}/>}
+                        {activeTab === 2 && <Tab2 t={t}/>}
                     </motion.div>
                 </AnimatePresence>
             </div>
 
             <div className={styles.desktopTabs}>
-                <Tab1 />
-                <Tab2 />
+                <Tab1 t={t}/>
+                <Tab2 t={t}/>
             </div>
             
         </div>
     );
 }
 
-const Tab1 = () => {
+const Tab1 = ({ t }) => {
     return (
         <div className={styles.tab1}>
-            <div><h1>Email:</h1><h3>contact@einarlogi.is</h3></div>
-            <div><h1>Phone:</h1><h3>+354 770-7327</h3></div>
+            <div className={styles.socialsTitle}><h1>{t('email')}</h1><h3>contact@einarlogi.is</h3></div>
+            <div className={styles.socialsTitle}><h1>{t('phone')}</h1><h3>+354 770-7327</h3></div>
             <div className={styles.socialsWrapper}>
-                <h3>Check me out on:</h3>
+                <h3>{t('social')}</h3>
                 <div className={styles.socials}>
                     <a href="https://www.linkedin.com/in/einarlogioskars" target="_blank" rel="noopener noreferrer">
                         <svg
@@ -100,7 +102,7 @@ const Tab1 = () => {
     );
 }
 
-const Tab2 = () => {
+const Tab2 = ({ t }) => {
     return (
         <div className={styles.tab2}>
             <ContactForm />

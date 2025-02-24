@@ -3,7 +3,7 @@ import { getMessages } from "next-intl/server";
 import { regime } from '../app/fonts';
 
 import Header from "./Header/Header";
-import MobileNav2 from "./MobileNav/MobileNav";
+import MobileNav from "./MobileNav/MobileNav";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
@@ -15,7 +15,7 @@ export default async function BaseLayout({ children, locale}) {
     <html lang={locale} className={regime.variable}>
         <body>
             <NextIntlClientProvider messages={messages}>
-                <MobileNav2 />
+                <MobileNav />
                 <Header />
                 <Analytics />
                 <SpeedInsights />

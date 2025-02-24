@@ -19,7 +19,12 @@
     "Contact": {
         "name":"Einar Logi",
         "title": "Hafðu samband",
-        "titleText": "Whether you're looking for a web developer, need help with a tech project, or just want to chat about design, gaming, or creative ideas, feel free to drop me a message!"
+        "titleText": "Hvort sem þig vantar að láta búa til vefsíðu, aðstoð með eitthvað verkefni, eða bara spjalla um hönnum, tölvuleiki, eða bara hvað sem er, ekki hika við að senda mér skilaboð!",
+        "myInfo": "Upplýsingar",
+        "message": "Senda skilaboð",
+        "email": "Netfang",
+        "phone": "Sími",
+        "social": "Kíktu á mig á"
     },
 
     "NotFound": {
