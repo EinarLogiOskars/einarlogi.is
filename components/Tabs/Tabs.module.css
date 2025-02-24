@@ -82,6 +82,7 @@
 @media(min-width: 768px) {
     .desktopTabs {
         display: flex;
+        flex-wrap: wrap;
         gap: 2rem;
     }
 
@@ -102,7 +103,7 @@
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: repeat(1fr);
-    gap: 2rem;
+    gap: 1rem;
 }
 
 @media(min-width: 768px) {
@@ -120,7 +121,6 @@
     display: flex;
     flex-direction:column ;
     align-items: center;
-    gap: 0.5rem;
 }
 
 .tab1 div h1 {

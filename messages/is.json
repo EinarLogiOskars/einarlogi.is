@@ -1,6 +1,6 @@
 {
     "Home": {
-        "name": "Hæ, ég heiti Einar Logi",
+        "name": "Hæ, ég er Einar Logi",
         "iAm": "Ég er"
     },
 
@@ -8,7 +8,7 @@
         "title": "Hugbúnaðarþróun",
         "name": "Einar Logi",
         "about": "Hæ, ég heiti Einar!",
-        "paragraph1": "Ég er forritari, hönnuður, og tækniáhugamaður staðsettur á Íslandi. Ég hef gaman af því að búa til alskonar hluti - hvort sem við erum að tala um vefsíður, flotta hönnun, eða rækta up stofn örrækja í fiskabúrinu mínu (Ég á orðið alltof margar!)",
+        "paragraph1": "Ég er forritari, framendahönnuður, og tækniáhugamaður staðsettur á Íslandi. Ég hef gaman af því að búa til alskonar hluti - hvort sem við erum að tala um vefsíður, flotta hönnun, eða rækta up stofn örrækja í fiskabúrinu mínu (Ég á orðið alltof margar!)",
         "paragraph2": "Í frítímanum mínum finnurðu mig að öllum líkindum úti að hlaupa, málandi Blood Angles herinn minn fyrir Warhammer 40k, eða vinna í að gera þessa vefsíðu aðeins flottari.",
         "paragraph3": "Í augnablikinu er ég að vinna að JITR, starfslausnarvetvang, og einnig að vinna að því að starta vefsíðugerðarþjónustu. Ef þig vantar geggjaða vefsíðu eða ef þig langar bara að tala um einhverja tækni, ekki hika við að senda mér línu!"
     },
@@ -36,17 +36,16 @@
     "Phrases": {
         "phrase0": "Forritari",
         "phrase1": "Tækni Áhugamaður",
-        "phrase2": "WH40k Safnari",
-        "phrase3": "Koffínfíkill",
+        "phrase2": "Módel Málari",
+        "phrase3": "Hlaupari",
         "count": "4"
     },
 
     "Menu": {
-        "home": "Heim",
-        "about": "Um mig",
-        "projects": "Verkefni",
-        "contact": "Hafa samband",
-        "language": "English",
+        "home": "heim",
+        "about": "um mig",
+        "projects": "verkefni",
+        "contact": "hafa samband",
         "locale": "en"
     }
 }

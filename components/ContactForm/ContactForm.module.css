@@ -14,6 +14,7 @@
     background: var(--background);
     color: var(--foreground);
     border-bottom: 1px solid white;
+    
 }
 
 .input:focus {
@@ -37,6 +38,13 @@
 .message:focus {
     outline: none;
     border: 2px solid var(--accentPink);
+}
+
+.input,
+.message {
+    border-radius: 0;
+    appearance: none;
+    -webkit-appearance: none;
 }
 
 .submitButton {

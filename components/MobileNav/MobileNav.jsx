@@ -41,7 +41,7 @@ export default function MobileNav() {
                 animate={menuOpen ? 'open' : 'closed'}
                 className={styles.navOverlay}
             >
-                <NavItems toggleMenu={toggleMenu} localeChange={localeChange} />
+                <NavItems toggleMenu={toggleMenu} localeChange={localeChange} t={t}/>
             </motion.nav>
         </div>
     );
@@ -68,19 +68,19 @@ const navVariants = {
     },
 } 
 
-const NavItems = ({ toggleMenu, localeChange }) => {
+const NavItems = ({ toggleMenu, localeChange, t }) => {
     return (
         <motion.ul className={styles.list} variants={listVariants}>
+            
             <motion.li
                 className={styles.listItem}
                 variants={listItemVariants}
                 whileHover={{ color: '#a374ff' }}
             >
                 <TransitionLink href={'/'} toggleMenu={toggleMenu}>
-                    <motion.span className={styles.navLinkLetter} variants={letterVariants}>h</motion.span>
-                    <motion.span className={styles.navLinkLetter} variants={letterVariants}>o</motion.span>
-                    <motion.span className={styles.navLinkLetter} variants={letterVariants}>m</motion.span>
-                    <motion.span className={styles.navLinkLetter} variants={letterVariants}>e</motion.span>
+                    {t('home').split('').map((char, i) => (
+                        <motion.span key={i} className={styles.navLinkLetter} variants={letterVariants}>{char}</motion.span>
+                    ))}
                     <motion.span className={styles.navLinkLetter} variants={letterVariants} style={{ color: 'var(--accentPurple)'}}>.</motion.span>
                 </TransitionLink>
             </motion.li>
@@ -90,11 +90,9 @@ const NavItems = ({ toggleMenu, localeChange }) => {
                 whileHover={{ color: '#80ef80' }}
             >
                 <TransitionLink href={'/about'} toggleMenu={toggleMenu}>
-                    <motion.span className={styles.navLinkLetter} variants={letterVariants}>a</motion.span>
-                    <motion.span className={styles.navLinkLetter} variants={letterVariants}>b</motion.span>
-                    <motion.span className={styles.navLinkLetter} variants={letterVariants}>o</motion.span>
-                    <motion.span className={styles.navLinkLetter} variants={letterVariants}>u</motion.span>
-                    <motion.span className={styles.navLinkLetter} variants={letterVariants}>t</motion.span>
+                    {t('about').split('').map((char, i) => (
+                        <motion.span key={i} className={styles.navLinkLetter} variants={letterVariants}>{char === ' ' ? '\u00A0' : char}</motion.span>
+                    ))}
                     <motion.span className={styles.navLinkLetter} variants={letterVariants} style={{ color: 'var(--accentGreen)'}}>.</motion.span>
                 </TransitionLink>
             </motion.li>
@@ -104,14 +102,9 @@ const NavItems = ({ toggleMenu, localeChange }) => {
                 whileHover={{ color: '#ef798a' }}
             >
                 <TransitionLink href={'/projects'} toggleMenu={toggleMenu}>
-                    <motion.span className={styles.navLinkLetter} variants={letterVariants}>p</motion.span>
-                    <motion.span className={styles.navLinkLetter} variants={letterVariants}>r</motion.span>
-                    <motion.span className={styles.navLinkLetter} variants={letterVariants}>o</motion.span>
-                    <motion.span className={styles.navLinkLetter} variants={letterVariants}>j</motion.span>
-                    <motion.span className={styles.navLinkLetter} variants={letterVariants}>e</motion.span>
-                    <motion.span className={styles.navLinkLetter} variants={letterVariants}>c</motion.span>
-                    <motion.span className={styles.navLinkLetter} variants={letterVariants}>t</motion.span>
-                    <motion.span className={styles.navLinkLetter} variants={letterVariants}>s</motion.span>
+                    {t('projects').split('').map((char, i) => (
+                        <motion.span key={i} className={styles.navLinkLetter} variants={letterVariants}>{char}</motion.span>
+                    ))}
                     <motion.span className={styles.navLinkLetter} variants={letterVariants} style={{ color: 'var(--accentPink)'}}>.</motion.span>
                 </TransitionLink>
             </motion.li>
@@ -121,30 +114,11 @@ const NavItems = ({ toggleMenu, localeChange }) => {
                 whileHover={{ color: '#ffc759' }}
             >
                 <TransitionLink href={'/contact'} toggleMenu={toggleMenu}>
-                    <motion.span className={styles.navLinkLetter} variants={letterVariants}>c</motion.span>
-                    <motion.span className={styles.navLinkLetter} variants={letterVariants}>o</motion.span>
-                    <motion.span className={styles.navLinkLetter} variants={letterVariants}>n</motion.span>
-                    <motion.span className={styles.navLinkLetter} variants={letterVariants}>t</motion.span>
-                    <motion.span className={styles.navLinkLetter} variants={letterVariants}>a</motion.span>
-                    <motion.span className={styles.navLinkLetter} variants={letterVariants}>c</motion.span>
-                    <motion.span className={styles.navLinkLetter} variants={letterVariants}>t</motion.span>
+                    {t('contact').split('').map((char, i) => (
+                        <motion.span key={i} className={styles.navLinkLetter} variants={letterVariants}>{char === ' ' ? '\u00A0' : char}</motion.span>
+                    ))}
                     <motion.span className={styles.navLinkLetter} variants={letterVariants} style={{ color: 'var(--accentYellow)'}}>.</motion.span>
                 </TransitionLink>
-            </motion.li>
-            <motion.li
-                className={styles.listItemLangSwitch}
-                variants={listItemVariants}
-                whileHover={{ color: '#ffc759' }}
-            >
-                <div toggleMenu={toggleMenu} onClick={localeChange}>
-                    <motion.span className={styles.navLangLetter} variants={letterVariants}>i</motion.span>
-                    <motion.span className={styles.navLangLetter} variants={letterVariants}>s</motion.span>
-                    <motion.span className={styles.navLangLetter} variants={letterVariants}> </motion.span>
-                    <motion.span className={styles.navLangSpacer} variants={letterVariants}>|</motion.span>
-                    <motion.span className={styles.navLangLetter} variants={letterVariants}> </motion.span>
-                    <motion.span className={styles.navLangLetter} variants={letterVariants}>e</motion.span>
-                    <motion.span className={styles.navLangLetter} variants={letterVariants}>n</motion.span>
-                </div>
             </motion.li>
         </motion.ul>
     );

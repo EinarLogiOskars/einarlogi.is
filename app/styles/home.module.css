@@ -27,15 +27,17 @@
 }
 
 .nameSection {
+  display: flex;
+  flex-wrap: nowrap;
   align-self: flex-start;
 }
 
 .name {
-  font-size: 2rem;
+  font-size: 1.9rem;
   font-weight: 200;
 }
 
-@media(min-width: 400px) {
+@media(min-width: 500px) {
   .name {
     font-size: 3rem;
   }

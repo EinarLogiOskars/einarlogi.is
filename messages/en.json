@@ -37,11 +37,10 @@
     },
 
     "Menu": {
-        "home": "Home",
-        "about": "About",
-        "projects": "Projects",
-        "contact": "Contact",
-        "language": "Íslenska",
+        "home": "home",
+        "about": "about",
+        "projects": "projects",
+        "contact": "contact",
         "locale": "is"
     },
 
@@ -49,7 +48,7 @@
         "phrase0": "Software Developer",
         "phrase1": "Miniature Painter",
         "phrase2": "Tech Enthusiast",
-        "phrase3": "Caffeine addict",
+        "phrase3": "Runner",
         "count": "4"
     }
 }

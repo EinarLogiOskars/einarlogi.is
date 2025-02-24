@@ -1,7 +1,9 @@
 'use client'
-import { useState } from 'react'
-import styles from './Header.module.css'
-import TransitionLink from '../utils/TransitionLink'
+
+import TransitionLink from '../utils/TransitionLink';
+import LocaleSwitcher from '../LocaleSwitcher';
+
+import styles from './Header.module.css';
 
 export default function Header() {
     return (
@@ -14,6 +16,8 @@ export default function Header() {
                     </svg>
                 </TransitionLink>
             </div>
+
+            <LocaleSwitcher />
         </header>
     )
 }
