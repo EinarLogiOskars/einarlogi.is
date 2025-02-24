@@ -47,6 +47,7 @@
   justify-self: center;
   font-size: 1rem;
   gap: 6px;
+  margin-top: 10px;
 }
 
 @media(min-width: 400px) {

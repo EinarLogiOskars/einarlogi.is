@@ -24,7 +24,7 @@ export default function Home() {
             </div>
 
             <div className={styles.phraseSection}>
-              <p>I am a</p><CyclingPhrases />
+              <p>{t('iAm')}</p><CyclingPhrases />
             </div>
 
           </div>
