@@ -19,6 +19,7 @@
   --accentYellow: #ffc759;
   --header-height: 100px;
   letter-spacing: 0.7px;
+  line-height: 1.6;
 }
 
 html {
