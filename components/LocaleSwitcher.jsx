@@ -39,16 +39,19 @@ export default function LocaleSwitcher() {
 */
 
 const style = {
-    border: '5px solid white',
+    border: '1px solid var(--accentPurple)',
     borderRadius: '500px',
     marginRight: '5rem',
     height: '58px',
+    width: '100px',
     display: 'flex',
     alignItems: 'center',
     cursor: 'pointer',
 } 
 
 const text = {
-    padding: '0 1rem 0 1rem',
-    fontSize: '1.5rem',
+    padding: '0.2rem 1rem 0 1rem',
+    width: '100%',
+    fontSize: '1rem',
+    textAlign: 'center',
 }

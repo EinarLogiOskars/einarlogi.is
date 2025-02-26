@@ -13,9 +13,9 @@
 
 .imgWrapper {
     width: 100%;
-    min-height: 250px;
     display: flex;
     align-items: center;
+    margin-top: 1rem;
 }
 
 .projectImage {
@@ -26,12 +26,24 @@
     border: 1px solid white;
 }
 
+.textWrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
 .title {
     font-size: 2rem;
-    font-weight: 300;
+    font-weight: 500;
     color: var(--accentPurple);
 }
 
 .description {
     font-weight: 200;
+}
+
+.publishDate {
+    color: var(--accentPink);
+    font-weight: 500;
+    font-size: 0.8rem;
 }
