@@ -39,7 +39,7 @@ export default function LocaleSwitcher() {
 */
 
 const style = {
-    border: 'solid white',
+    border: '5px solid white',
     borderRadius: '500px',
     marginRight: '5rem',
     height: '58px',
