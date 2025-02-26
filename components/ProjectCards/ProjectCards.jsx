@@ -5,6 +5,7 @@ import { motion } from 'motion/react';
 
 
 import styles from './ProjectCards.module.css';
+import { Link } from '@/i18n/routing';
 
 export default function ProjectCards({ projects, locale }) {
 
@@ -18,84 +19,28 @@ export default function ProjectCards({ projects, locale }) {
     return (
         <div className={styles.cardGrid}>
             {projects.map((project) => (
-                <motion.div
-                    key={project._id}
-                    whileHover={{ scale: 1.1 }}
-                    className={styles.card}
-                >
-                    <div className={styles.imgWrapper}>
-                        {project.mainImage && <img
-                            src={urlFor(project.mainImage).width(600).url()}
-                            alt={project.title?.en || "Project image"}
-                            className={styles.projectImage} 
-                        />}
-                    </div>
-                    <div className={styles.textWrapper}>
-                        <p className={styles.title}>{project.title?.[locale] || project.title?.en}</p>
-                        <p className={styles.description}>{project.description?.[locale]}</p>
-                        <p className={styles.publishDate}>{formatDate(project.publishedAt)}</p>
-                    </div>
-                </motion.div>
-            ))}
-            {projects.map((project) => (
-                <motion.div
-                    key={project._id}
-                    whileHover={{ scale: 1.1 }}
-                    className={styles.card}
-                >
-                    <div className={styles.imgWrapper}>
-                        {project.mainImage && <img
-                            src={urlFor(project.mainImage).width(600).url()}
-                            alt={project.title?.en || "Project image"}
-                            className={styles.projectImage} 
-                        />}
-                    </div>
-                    <div className={styles.textWrapper}>
-                        <p className={styles.title}>{project.title?.[locale] || project.title?.en}</p>
-                        <p className={styles.description}>{project.description?.[locale]}</p>
-                        <p className={styles.publishDate}>{formatDate(project.publishedAt)}</p>
-                    </div>
-                </motion.div>
-            ))}
-            {projects.map((project) => (
-                <motion.div
-                    key={project._id}
-                    whileHover={{ scale: 1.1 }}
-                    className={styles.card}
-                >
-                    <div className={styles.imgWrapper}>
-                        {project.mainImage && <img
-                            src={urlFor(project.mainImage).width(600).url()}
-                            alt={project.title?.en || "Project image"}
-                            className={styles.projectImage} 
-                        />}
-                    </div>
-                    <div className={styles.textWrapper}>
-                        <p className={styles.title}>{project.title?.[locale] || project.title?.en}</p>
-                        <p className={styles.description}>{project.description?.[locale]}</p>
-                        <p className={styles.publishDate}>{formatDate(project.publishedAt)}</p>
-                    </div>
-                </motion.div>
-            ))}
-            {projects.map((project) => (
-                <motion.div
-                    key={project._id}
-                    whileHover={{ scale: 1.1 }}
-                    className={styles.card}
-                >
-                    <div className={styles.imgWrapper}>
-                        {project.mainImage && <img
-                            src={urlFor(project.mainImage).width(600).url()}
-                            alt={project.title?.en || "Project image"}
-                            className={styles.projectImage} 
-                        />}
-                    </div>
-                    <div className={styles.textWrapper}>
-                        <p className={styles.title}>{project.title?.[locale] || project.title?.en}</p>
-                        <p className={styles.description}>{project.description?.[locale]}</p>
-                        <p className={styles.publishDate}>{formatDate(project.publishedAt)}</p>
-                    </div>
-                </motion.div>
+                <Link href={"/"} key={project._id}>
+                    <motion.div
+                        className={styles.card}
+                    >
+                        <motion.div
+                            className={styles.imgWrapper}
+                        >
+                            {project.mainImage && <motion.img
+                                src={urlFor(project.mainImage).width(750).url()}
+                                alt={project.title?.en || "Project image"}
+                                className={styles.projectImage} 
+                                whileHover={{ scale: 1.1 }}
+                                transition={{ duration: 0.5 }}
+                            />}
+                        </motion.div>
+                        <div className={styles.textWrapper}>
+                            <p className={styles.title}>{project.title?.[locale] || project.title?.en}</p>
+                            <p className={styles.description}>{project.description?.[locale]}</p>
+                            <p className={styles.publishDate}>{formatDate(project.publishedAt)}</p>
+                        </div>
+                    </motion.div>
+                </Link>
             ))}
         </div>
     );

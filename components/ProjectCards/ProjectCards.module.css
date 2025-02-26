@@ -1,14 +1,28 @@
 .cardGrid {
     display: grid;
-    grid-template-columns: repeat(auto, minmax(300px, 1fr));
-    gap: 1rem;
+    grid-template-columns: 1fr;
+    gap: 4rem;
     padding: 1rem;
+}
+
+@media(min-width: 800px) {
+    .cardGrid {
+        grid-template-columns: 1fr 1fr;
+        padding: 1rem 3rem;
+    }
 }
 
 .card {
     max-width: 550px;
     background: transparent;
     padding: 0.5rem;
+    cursor: pointer;
+}
+
+@media(min-width: 800px) {
+    .card {
+        max-width: 730px;
+    }
 }
 
 .imgWrapper {
@@ -16,14 +30,16 @@
     display: flex;
     align-items: center;
     margin-top: 1rem;
+    overflow: hidden;
+    border-radius: 30px;
 }
 
 .projectImage {
     width: 100%;
     height: auto;
     object-fit: cover;
-    border-radius: 6px;
     border: 1px solid white;
+    border-radius: 30px;
 }
 
 .textWrapper {
@@ -47,3 +63,4 @@
     font-weight: 500;
     font-size: 0.8rem;
 }
+
