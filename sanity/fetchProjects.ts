@@ -4,7 +4,7 @@ import { client } from "./client";
 const PROJECTS_QUERY = `*[
     _type == "project"
     && defined(slug.current)
-]|order(publishedAt desc)[0...12]{_id, title, slug, publishedAt, description, mainImage}`;
+]|order(publishedAt desc)[0...12]{_id, title, slug, publishedAt, description, cardImage}`;
 
 const options = { next: { revalidate: 30 } };
 

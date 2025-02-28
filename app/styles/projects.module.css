@@ -2,7 +2,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: calc(100dvh - var(--header-height));
     background: var(--background);
     color: var(--foreground);
   }
@@ -17,14 +16,21 @@
 }
 
 .container h1 {
-    font-weight: 200;
-    text-align: center;
-    margin: 5rem 0 3rem 0;
+    font-weight: 500;
+    font-size: 2.5rem;
+    margin: 3rem 0 3rem 0;
+    align-self: flex-start;
+}
+
+@media(min-width: 800px) {
+    .container h1 {
+        font-size: 4rem;
+    }
 }
 
 @media(min-width: 1024px) {
     .container h1 {
-        font-size: 3rem;
+        font-size: 8rem;
     }
 }
 

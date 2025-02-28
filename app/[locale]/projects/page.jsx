@@ -10,7 +10,6 @@ export default function Projects() {
     return (
         <main className={styles.hero}>
             <div className={styles.container}>
-                <h1>{t('title')}<span>.</span></h1>
                 <ProjectCardsWrapper />
             </div>
         </main>
